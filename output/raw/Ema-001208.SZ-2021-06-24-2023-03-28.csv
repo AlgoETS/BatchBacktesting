@@ -1,0 +1,25 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-06-24,2023-03-28,642 days,52.643678160919535,110499.92746000002,142889.50156,10.49992746000002,94.69696969696967,5.9546572833839795,29.70466442476865,0.20046202839506935,0.31356412980687487,0.24665286321805774,-24.141853476558516,-7.480111393886362,257 days,48 days,4,50.0,24.900203633072604,-8.784230394484938,2.527909352450819,159 days,84 days,2.038951193603684,3.285577760890204,0.33577199092819393,"                  Equity  DrawdownPct DrawdownDuration
+2021-06-24  100000.00000     0.000000              NaT
+2021-06-25  100000.00000     0.000000              NaT
+2021-06-28  100000.00000     0.000000              NaT
+2021-06-29  100000.00000     0.000000              NaT
+2021-06-30  100000.00000     0.000000              NaT
+...                  ...          ...              ...
+2023-03-22  110710.58746     0.225201              NaT
+2023-03-23  111131.90746     0.222253              NaT
+2023-03-24  110289.26746     0.228150              NaT
+2023-03-27  111131.90746     0.222253              NaT
+2023-03-28  110499.92746     0.226676         257 days
+
+[435 rows x 3 columns]","    Size  EntryBar  ExitBar  EntryPrice  ExitPrice          PnL  ReturnPct  \
+0  -6733       131      181    14.85024    11.1525  24896.88342   0.249002   
+1  10191       254      295    12.25446    11.1780 -10970.20386  -0.087842   
+2 -10368       299      400    10.98798    10.8900   1015.85664   0.008917   
+3  10533       400      434    10.91178    10.4900  -4442.60874  -0.038654   
+
+   EntryTime   ExitTime Duration  
+0 2022-01-05 2022-03-16  70 days  
+1 2022-07-01 2022-08-29  59 days  
+2 2022-09-02 2023-02-08 159 days  
+3 2023-02-08 2023-03-28  48 days  ",001208.SZ,Ema,

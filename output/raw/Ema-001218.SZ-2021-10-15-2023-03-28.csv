@@ -1,0 +1,23 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-10-15,2023-03-28,529 days,31.092436974789916,92291.27884418999,103922.460339,-7.70872115581001,-52.69952618339852,-5.505283273715089,12.811850334013663,0.0,0.0,0.0,-16.151316566271646,-16.151316566271646,162 days,162 days,3,33.33333333333333,2.9700986785032857,-7.272407359194655,-2.6387608526122652,117 days,54 days,0.2798197734388702,-2.5480762288596193,-0.8922680306324264,"                   Equity  DrawdownPct DrawdownDuration
+2021-10-15  100000.000000     0.000000              NaT
+2021-10-18  100000.000000     0.000000              NaT
+2021-10-19  100000.000000     0.000000              NaT
+2021-10-20  100000.000000     0.000000              NaT
+2021-10-21  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2023-03-22   90262.278844     0.131446              NaT
+2023-03-23   89450.682902     0.139256              NaT
+2023-03-24   89288.358844     0.140818              NaT
+2023-03-27   92088.382902     0.113874              NaT
+2023-03-28   92291.278844     0.111922         162 days
+
+[357 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice          PnL  ReturnPct  \
+0  4339       246      250   23.046000  21.370001 -7272.159661  -0.072724   
+1 -4347       250      327   21.327261  22.040001 -3098.280789  -0.033419   
+2  4058       327      356   22.084081  22.740000  2661.719294   0.029701   
+
+   EntryTime   ExitTime Duration  
+0 2022-10-17 2022-10-21   4 days  
+1 2022-10-21 2023-02-15 117 days  
+2 2023-02-15 2023-03-28  41 days  ",001218.SZ,Ema,

@@ -1,0 +1,25 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-03-29,2023-03-28,1825 days,8.116883116883116,65497.79999999999,100000.0,-34.50220000000001,10.08717310087173,-8.291411453803633,8.156106672910013,0.0,0.0,0.0,-34.502200000000016,-34.502200000000016,1516 days,1516 days,4,0.0,-10.056909070366249,-13.594863504929311,-11.775604680475471,62 days,36 days,0.0,-11.7663777640044,-9.704289623873255,"              Equity  DrawdownPct DrawdownDuration
+2018-03-29  100000.0     0.000000              NaT
+2018-03-30  100000.0     0.000000              NaT
+2018-04-02  100000.0     0.000000              NaT
+2018-04-03  100000.0     0.000000              NaT
+2018-04-04  100000.0     0.000000              NaT
+...              ...          ...              ...
+2023-03-22   65497.8     0.345022              NaT
+2023-03-23   65497.8     0.345022              NaT
+2023-03-24   65497.8     0.345022              NaT
+2023-03-27   65497.8     0.345022              NaT
+2023-03-28   65497.8     0.345022        1516 days
+
+[1232 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice      PnL  ReturnPct  \
+0     1       208      225     77655.0    68300.0  -9355.0  -0.120469   
+1    -1       233      237     67265.2    74030.0  -6764.8  -0.100569   
+2     1       238      280     79057.8    68310.0 -10747.8  -0.135949   
+3    -1       281      314     67165.4    74800.0  -7634.6  -0.113669   
+
+   EntryTime   ExitTime Duration  
+0 2019-02-07 2019-03-05  26 days  
+1 2019-03-15 2019-03-21   6 days  
+2 2019-03-22 2019-05-23  62 days  
+3 2019-05-24 2019-07-11  48 days  ",000660.KS,Ema,
