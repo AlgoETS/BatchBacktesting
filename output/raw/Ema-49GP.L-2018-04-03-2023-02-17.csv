@@ -1,0 +1,26 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-04-03,2023-02-17,1781 days,31.847649918962723,0.0,119480.54472000005,-100.0,-20.901639344262296,0.0,55.94926033630464,0.0,0.0,0.0,-100.0,-55.58770263999998,724 days,424 days,4,25.0,34.2447847667497,-9920.040080160321,0,446 days,143 days,0.0034481472726086812,-2474.278286824503,-0.997805677756047,"              Equity  DrawdownPct DrawdownDuration
+Date                                              
+2018-04-03  100000.0          0.0              NaT
+2018-04-04  100000.0          0.0              NaT
+2018-04-05  100000.0          0.0              NaT
+2018-04-06  100000.0          0.0              NaT
+2018-04-09  100000.0          0.0              NaT
+...              ...          ...              ...
+2023-02-13       0.0          1.0              NaT
+2023-02-14       0.0          1.0              NaT
+2023-02-15       0.0          1.0              NaT
+2023-02-16       0.0          1.0              NaT
+2023-02-17       0.0          1.0         724 days
+
+[1234 rows x 3 columns]","     Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0   88318       422      440     1.13226       1.07 -5.498679e+03  -0.054987   
+1  -88495       440      448     1.06786       1.13 -5.499079e+03  -0.058191   
+2   78605       448      506     1.13226       1.52  3.047830e+04   0.342448   
+3 -112413       734     1041     1.06287     106.50 -1.185250e+07 -99.200401   
+
+   EntryTime   ExitTime Duration  
+0 2019-11-29 2019-12-27  28 days  
+1 2019-12-27 2020-01-09  13 days  
+2 2020-01-09 2020-03-31  82 days  
+3 2021-02-24 2022-05-16 446 days  ",49GP.L,Ema,

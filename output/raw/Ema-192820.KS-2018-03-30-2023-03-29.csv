@@ -1,0 +1,26 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-03-30,2023-03-29,1825 days,6.163828061638281,85241.40000000001,100000.0,-14.75859999999999,-43.15789473684211,-3.2109126785479836,12.179264639857347,0.0,0.0,0.0,-30.383599999999987,-30.383599999999987,1171 days,1171 days,4,25.0,24.162053251986592,-16.739238546582136,-4.662177102987863,48 days,27 days,0.6367395392117569,-3.446118097508219,-0.5601105365984783,"              Equity  DrawdownPct DrawdownDuration
+Date                                              
+2018-03-30  100000.0     0.000000              NaT
+2018-04-02  100000.0     0.000000              NaT
+2018-04-03  100000.0     0.000000              NaT
+2018-04-04  100000.0     0.000000              NaT
+2018-04-05  100000.0     0.000000              NaT
+...              ...          ...              ...
+2023-03-23   85241.4     0.147586              NaT
+2023-03-24   85241.4     0.147586              NaT
+2023-03-27   85241.4     0.147586              NaT
+2023-03-28   85241.4     0.147586              NaT
+2023-03-29   85241.4     0.147586        1171 days
+
+[1233 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice      PnL  ReturnPct  \
+0     1       438      446     88877.4    74000.0 -14877.4  -0.167392   
+1    -1       449      464     70458.8    78200.0  -7741.2  -0.109868   
+2    -1       478      494     73752.2    81290.0  -7537.8  -0.102204   
+3     1      1153     1186     63727.2    79125.0  15397.8   0.241621   
+
+   EntryTime   ExitTime Duration  
+0 2020-01-14 2020-01-28  14 days  
+1 2020-01-31 2020-02-21  21 days  
+2 2020-03-12 2020-04-03  22 days  
+3 2022-12-02 2023-01-19  48 days  ",192820.KS,Ema,

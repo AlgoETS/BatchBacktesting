@@ -1,0 +1,22 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-01-15,2023-03-29,803 days,0.3663003663003663,82118.59348,100000.0,-17.881406520000002,-90.0,-8.691446549199888,8.276173655880346,0.0,0.0,0.0,-17.88140652000001,-17.88140652000001,456 days,456 days,2,0.0,-8.575359674573036,-10.179640718562865,-9.381050319450202,0 days,0 days,0.0,-9.37750019656795,-7.219934765025909,"                  Equity  DrawdownPct DrawdownDuration
+Date                                                  
+2021-01-15  100000.00000     0.000000              NaT
+2021-01-18  100000.00000     0.000000              NaT
+2021-01-19  100000.00000     0.000000              NaT
+2021-01-20  100000.00000     0.000000              NaT
+2021-01-21  100000.00000     0.000000              NaT
+...                  ...          ...              ...
+2023-03-23   82118.59348     0.178814              NaT
+2023-03-24   82118.59348     0.178814              NaT
+2023-03-27   82118.59348     0.178814              NaT
+2023-03-28   82118.59348     0.178814              NaT
+2023-03-29   82118.59348     0.178814         456 days
+
+[546 rows x 3 columns]","    Size  EntryBar  ExitBar  EntryPrice  ExitPrice          PnL  ReturnPct  \
+0  15353       235      235     6.51300      5.850 -10179.03900  -0.101796   
+1 -22388       288      288     4.01196      4.356  -7702.36752  -0.085754   
+
+   EntryTime   ExitTime Duration  
+0 2021-12-29 2021-12-29   0 days  
+1 2022-03-16 2022-03-16   0 days  ",2125.HK,Ema,

@@ -1,0 +1,26 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-04-03,2023-02-17,1781 days,80.39867109634552,70068.4341958,100000.0,-29.931565804199998,-21.052631578947366,-7.174460569672291,21.49008336654282,0.0,0.0,0.0,-47.379000000000005,-47.379000000000005,1438 days,1438 days,4,50.0,16.500336660013293,-37.624750499002005,-8.529420375280916,774 days,358 days,0.5759389053719196,-5.64431652187109,-0.6852553617433639,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2018-04-03  100000.000000     0.000000              NaT
+2018-04-04  100000.000000     0.000000              NaT
+2018-04-06  100000.000000     0.000000              NaT
+2018-04-09  100000.000000     0.000000              NaT
+2018-04-10  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2023-02-13   70068.434196     0.299316              NaT
+2023-02-14   70068.434196     0.299316              NaT
+2023-02-15   70068.434196     0.299316              NaT
+2023-02-16   70068.434196     0.299316              NaT
+2023-02-17   70068.434196     0.299316        1438 days
+
+[1204 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice   ExitPrice           PnL  ReturnPct  \
+0   249       232      464  400.800000  250.000000 -37549.200000  -0.376248   
+1  -240       465      565  259.480000  300.000000  -9724.800000  -0.156158   
+2   175       570      680  300.600000  350.200012   8680.002100   0.165003   
+3  -175       680     1203  349.499612  300.000000   8662.432096   0.141630   
+
+   EntryTime   ExitTime Duration  
+0 2019-03-13 2020-02-20 344 days  
+1 2020-02-21 2020-07-20 150 days  
+2 2020-07-27 2021-01-04 161 days  
+3 2021-01-04 2023-02-17 774 days  ",4335.HK,Ema,

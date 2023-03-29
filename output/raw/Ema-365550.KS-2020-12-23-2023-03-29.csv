@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2020-12-23,2023-03-29,826 days,49.642857142857146,122505.26,122505.26,22.505259999999993,-27.360308285163775,9.564442027783414,16.76755957657718,0.5704134811093264,0.901354417096077,0.6649999337613998,-14.3826210232603,-2.6162156479755323,165 days,24 days,3,66.66666666666666,25.91314704881461,-3.828706223915801,7.200253509993537,199 days,138 days,7.221307930758538,7.939853465130649,0.8596145322952993,"               Equity  DrawdownPct DrawdownDuration
+Date                                               
+2020-12-23  100000.00          0.0              NaT
+2020-12-24  100000.00          0.0              NaT
+2020-12-28  100000.00          0.0              NaT
+2020-12-29  100000.00          0.0              NaT
+2020-12-30  100000.00          0.0              NaT
+...               ...          ...              ...
+2023-03-23  122505.26          0.0              NaT
+2023-03-24  122505.26          0.0              NaT
+2023-03-27  122505.26          0.0              NaT
+2023-03-28  122505.26          0.0              NaT
+2023-03-29  122505.26          0.0              NaT
+
+[560 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice       PnL  ReturnPct  \
+0   -14       165      297     6716.54     6600.0   1631.56   0.017351   
+1    15       297      363     6613.20     6360.0  -3798.00  -0.038287   
+2   -15       363      442     6347.28     4702.5  24671.70   0.259131   
+
+   EntryTime   ExitTime Duration  
+0 2021-08-24 2022-03-11 199 days  
+1 2022-03-11 2022-06-15  96 days  
+2 2022-06-15 2022-10-11 118 days  ",365550.KS,Ema,

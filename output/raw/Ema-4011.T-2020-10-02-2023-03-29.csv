@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2020-10-02,2023-03-29,908 days,19.047619047619047,101998.73999999999,115275.0,1.9987399999999904,-62.18518518518519,0.822270123509794,20.77385561490226,0.03958196970041195,0.07157501835772134,0.028527793524637288,-28.82347430058556,-10.629516220802193,133 days,45 days,3,33.33333333333333,22.666361787165524,-10.846693386773554,0.8096727003514825,126 days,57 days,1.3203153155396077,1.8329921503191682,0.0759371126181613,"               Equity  DrawdownPct DrawdownDuration
+Date                                               
+2020-10-02  100000.00      0.00000              NaT
+2020-10-05  100000.00      0.00000              NaT
+2020-10-06  100000.00      0.00000              NaT
+2020-10-07  100000.00      0.00000              NaT
+2020-10-08  100000.00      0.00000              NaT
+...               ...          ...              ...
+2023-03-23  101998.74      0.11517              NaT
+2023-03-24  101998.74      0.11517              NaT
+2023-03-27  101998.74      0.11517              NaT
+2023-03-28  101998.74      0.11517              NaT
+2023-03-29  101998.74      0.11517         133 days
+
+[609 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice       PnL  ReturnPct  \
+0    26       459      544     3757.50     3520.0  -6175.00  -0.063207   
+1   -26       544      567     3512.96     3894.0  -9907.04  -0.108467   
+2    19       571      577     4198.38     5150.0  18080.78   0.226664   
+
+   EntryTime   ExitTime Duration  
+0 2022-08-18 2022-12-22 126 days  
+1 2022-12-22 2023-01-27  36 days  
+2 2023-02-02 2023-02-10   8 days  ",4011.T,Ema,

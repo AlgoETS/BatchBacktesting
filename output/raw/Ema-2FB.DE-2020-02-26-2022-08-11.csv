@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2020-02-26,2022-08-11,897 days,27.751196172248804,112441.22,112441.22,12.441220000000001,8.0,4.825679148495965,14.904051132686194,0.3237830510332006,0.4861356275350087,0.332496152971419,-14.51348866857649,-2.7656499449793945,174 days,24 days,3,33.33333333333333,24.849699398797597,-7.622652712833089,3.990814505910234,113 days,83 days,2.4563496439933306,4.911061278983297,0.4489166481595759,"               Equity  DrawdownPct DrawdownDuration
+Date                                               
+2020-02-26  100000.00          0.0              NaT
+2020-02-27  100000.00          0.0              NaT
+2020-02-28  100000.00          0.0              NaT
+2020-03-02  100000.00          0.0              NaT
+2020-03-03  100000.00          0.0              NaT
+...               ...          ...              ...
+2022-08-05  112441.22          0.0              NaT
+2022-08-08  112441.22          0.0              NaT
+2022-08-09  112441.22          0.0              NaT
+2022-08-10  112441.22          0.0              NaT
+2022-08-11  112441.22          0.0              NaT
+
+[627 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice        PnL  ReturnPct  \
+0 -1237       394      425      80.838      87.00  -7622.394  -0.076227   
+1  1059       425      488      87.174      85.00  -2302.266  -0.024939   
+2 -1061       488      567      84.830      63.75  22365.880   0.248497   
+
+   EntryTime   ExitTime Duration  
+0 2021-09-15 2021-10-28  43 days  
+1 2021-10-28 2022-01-27  91 days  
+2 2022-01-27 2022-05-20 113 days  ",2FB.DE,Ema,

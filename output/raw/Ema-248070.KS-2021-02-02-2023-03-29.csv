@@ -1,0 +1,30 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-02-02,2023-03-29,785 days,54.13533834586466,111397.7,120710.9,11.397699999999997,-23.499142367066895,5.245740285433875,21.619077644831727,0.24264403743829127,0.3612829920578585,0.27489687738197366,-19.08257502010412,-5.854379287183878,290 days,47 days,6,50.0,25.47206213669575,-10.356452449431842,3.1112226827313627,156 days,70 days,2.0852980316129486,3.85698055322324,0.40062318434252336,"              Equity  DrawdownPct DrawdownDuration
+Date                                              
+2021-02-02  100000.0     0.000000              NaT
+2021-02-03  100000.0     0.000000              NaT
+2021-02-04  100000.0     0.000000              NaT
+2021-02-05  100000.0     0.000000              NaT
+2021-02-08  100000.0     0.000000              NaT
+...              ...          ...              ...
+2023-03-23  114197.7     0.053957              NaT
+2023-03-24  105597.7     0.125202              NaT
+2023-03-27  109597.7     0.092065              NaT
+2023-03-28  110797.7     0.082123              NaT
+2023-03-29  111397.7     0.077153          92 days
+
+[532 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice      PnL  ReturnPct  \
+0    -3       180      285     27445.0    25400.0   6135.0   0.074513   
+1     4       285      313     25450.8    22815.0 -10543.2  -0.103565   
+2    -3       317      340     24101.7    17962.5  18417.6   0.254721   
+3     5       402      406     22194.3    20025.0 -10846.5  -0.097741   
+4    -5       407      482     20159.6    20400.0  -1202.0  -0.011925   
+5     4       482      531     20440.8    22800.0   9436.8   0.115416   
+
+   EntryTime   ExitTime Duration  
+0 2021-10-27 2022-04-01 156 days  
+1 2022-04-01 2022-05-12  41 days  
+2 2022-05-18 2022-06-22  35 days  
+3 2022-09-21 2022-09-27   6 days  
+4 2022-09-28 2023-01-16 110 days  
+5 2023-01-16 2023-03-29  72 days  ",248070.KS,Ema,

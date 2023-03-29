@@ -1,0 +1,26 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2020-05-28,2022-11-16,902 days,1.89873417721519,71568.171038,101776.63481940002,-28.431828962,-82.21153760632392,-12.487142192843859,10.080951256358253,0.0,0.0,0.0,-29.68113834280741,-29.68113834280741,663 days,663 days,4,0.0,-5.638685784051134,-12.847572182367928,-8.022876851384876,6 days,4 days,0.0,-7.977860905637615,-3.6576092308124344,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2020-05-28  100000.000000     0.000000              NaT
+2020-05-29  100000.000000     0.000000              NaT
+2020-06-02  100000.000000     0.000000              NaT
+2020-06-03  100000.000000     0.000000              NaT
+2020-06-04  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2022-11-09   71568.171038     0.296811              NaT
+2022-11-10   71568.171038     0.296811              NaT
+2022-11-11   71568.171038     0.296811              NaT
+2022-11-15   71568.171038     0.296811              NaT
+2022-11-16   71568.171038     0.296811         663 days
+
+[632 rows x 3 columns]","     Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0   49406       166      167    2.024040     1.7640 -12847.536240  -0.128476   
+1  -54511       227      228    1.598796     1.7072  -5909.210444  -0.067804   
+2   81817       433      437    0.992982     0.9270  -5398.449294  -0.066448   
+3 -103116       446      448    0.735526     0.7770  -4276.632984  -0.056387   
+
+   EntryTime   ExitTime Duration  
+0 2021-01-22 2021-01-25   3 days  
+1 2021-04-21 2021-04-22   1 days  
+2 2022-02-08 2022-02-14   6 days  
+3 2022-02-25 2022-03-01   4 days  ",4XT.DE,Ema,

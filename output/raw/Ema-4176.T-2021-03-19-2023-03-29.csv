@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-03-19,2023-03-29,740 days,10.261569416498995,131320.046,159741.046,31.320046,-82.18545594459408,14.815052881977309,21.87448644620253,0.6772754605422631,1.4217443922374273,0.8326842981993489,-17.79192055622323,-6.057868998104424,91 days,20 days,3,66.66666666666666,24.849699398797597,-11.31173237564238,9.543201343210228,45 days,25 days,3.851212394907915,10.750717185770904,0.768831755318956,"                Equity  DrawdownPct DrawdownDuration
+Date                                                
+2021-03-19  100000.000     0.000000              NaT
+2021-03-22  100000.000     0.000000              NaT
+2021-03-23  100000.000     0.000000              NaT
+2021-03-24  100000.000     0.000000              NaT
+2021-03-25  100000.000     0.000000              NaT
+...                ...          ...              ...
+2023-03-23  131320.046     0.177919              NaT
+2023-03-24  131320.046     0.177919              NaT
+2023-03-27  131320.046     0.177919              NaT
+2023-03-28  131320.046     0.177919              NaT
+2023-03-29  131320.046     0.177919          91 days
+
+[497 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice        PnL  ReturnPct  \
+0   -59       182      197    1689.614    1269.75  24771.976   0.248497   
+1   200       404      407     621.240     737.50  23252.000   0.187142   
+2  -293       430      460     503.990     561.00 -16703.930  -0.113117   
+
+   EntryTime   ExitTime Duration  
+0 2021-12-15 2022-01-07  23 days  
+1 2022-11-11 2022-11-16   5 days  
+2 2022-12-20 2023-02-03  45 days  ",4176.T,Ema,

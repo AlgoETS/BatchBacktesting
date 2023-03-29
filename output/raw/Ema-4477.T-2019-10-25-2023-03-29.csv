@@ -1,0 +1,26 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2019-10-25,2023-03-29,1251 days,3.588516746411483,121294.64399999997,134816.36,21.29464399999997,5.026254200459392,5.99193825294031,16.224514903282664,0.36931386168765984,0.7706471390641925,0.2950083516813648,-20.311080072106346,-11.011421400976912,45 days,25 days,4,50.0,26.680874228332495,-15.174168561842794,4.950759585907472,10 days,8 days,2.0695174170159363,6.742779620902365,0.46859424887741824,"                Equity  DrawdownPct DrawdownDuration
+Date                                                
+2019-10-25  100000.000     0.000000              NaT
+2019-10-28  100000.000     0.000000              NaT
+2019-10-29  100000.000     0.000000              NaT
+2019-10-30  100000.000     0.000000              NaT
+2019-10-31  100000.000     0.000000              NaT
+...                ...          ...              ...
+2023-03-23  121294.644     0.100297              NaT
+2023-03-24  121294.644     0.100297              NaT
+2023-03-27  121294.644     0.100297              NaT
+2023-03-28  121294.644     0.100297              NaT
+2023-03-29  121294.644     0.100297          26 days
+
+[836 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice        PnL  ReturnPct  \
+0   -62       270      274    1598.796     1841.4 -15041.448  -0.151742   
+1    41       295      301    2072.136     2625.0  22667.424   0.266809   
+2   -52       335      343    2049.892     1527.0  27190.384   0.255083   
+3   457       819      827     294.588      265.0 -13521.716  -0.100439   
+
+   EntryTime   ExitTime Duration  
+0 2020-12-07 2020-12-11   4 days  
+1 2021-01-14 2021-01-22   8 days  
+2 2021-03-15 2021-03-25  10 days  
+3 2023-03-06 2023-03-16  10 days  ",4477.T,Ema,

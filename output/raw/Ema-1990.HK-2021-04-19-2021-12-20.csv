@@ -1,0 +1,18 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-04-19,2021-12-20,245 days,0.0,100000.0,100000.0,0.0,1.5463917525773232,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+Date                                               
+2021-04-19  100000.0          0.0               NaN
+2021-04-20  100000.0          0.0               NaN
+2021-04-21  100000.0          0.0               NaN
+2021-04-22  100000.0          0.0               NaN
+2021-04-23  100000.0          0.0               NaN
+...              ...          ...               ...
+2021-12-14  100000.0          0.0               NaN
+2021-12-15  100000.0          0.0               NaN
+2021-12-16  100000.0          0.0               NaN
+2021-12-17  100000.0          0.0               NaN
+2021-12-20  100000.0          0.0               NaN
+
+[165 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",1990.HK,Ema,

@@ -1,0 +1,28 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-04-02,2023-03-29,1822 days,4.2105263157894735,94950.020523316,100000.0,-5.049979476684006,-90.27550425081009,-1.0517997114820155,8.985494941641178,0.0,0.0,0.0,-32.19658260745,-32.19658260745,995 days,995 days,5,40.0,23.573601673033707,-17.96511688664557,-1.030635883694031,40 days,14 days,1.0625323543675331,0.5042520916350979,-0.14051800791268154,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2018-04-02  100000.000000       0.0000              NaT
+2018-04-03  100000.000000       0.0000              NaT
+2018-04-04  100000.000000       0.0000              NaT
+2018-04-05  100000.000000       0.0000              NaT
+2018-04-06  100000.000000       0.0000              NaT
+...                   ...          ...              ...
+2023-03-23   94950.020523       0.0505              NaT
+2023-03-24   94950.020523       0.0505              NaT
+2023-03-27   94950.020523       0.0505              NaT
+2023-03-28   94950.020523       0.0505              NaT
+2023-03-29   94950.020523       0.0505         995 days
+
+[1235 rows x 3 columns]","    Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0   5225       555      560   19.138200      15.70 -17964.595000  -0.179651   
+1  -6966       572      581   11.776400      13.80 -14096.397600  -0.171835   
+2   3725       590      594   18.236401      21.75  13088.156268   0.192670   
+3 -16109      1098     1099    5.029920       5.29  -4189.628720  -0.051707   
+4   3617      1162     1190   21.242401      26.25  18112.485576   0.235736   
+
+   EntryTime   ExitTime Duration  
+0 2020-07-08 2020-07-15   7 days  
+1 2020-07-31 2020-08-13  13 days  
+2 2020-08-26 2020-09-01   6 days  
+3 2022-09-13 2022-09-14   1 days  
+4 2022-12-15 2023-01-24  40 days  ",4THDIM.NS,Ema,

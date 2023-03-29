@@ -1,0 +1,26 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2020-09-29,2023-03-29,911 days,13.531353135313532,139752.804,139752.804,39.752804000000005,5.198019801980198,14.933584949860412,12.77014029409238,1.1694143216867294,2.5128772567064,2.4532099942705807,-6.087365119471011,-2.616947429748171,33 days,9 days,4,50.0,23.79820511648458,-4.250539511383133,8.730822003041938,50 days,30 days,8.209397035938697,9.411349883624679,1.2863117689262922,"                Equity  DrawdownPct DrawdownDuration
+Date                                                
+2020-09-29  100000.000          0.0              NaT
+2020-09-30  100000.000          0.0              NaT
+2020-10-05  100000.000          0.0              NaT
+2020-10-06  100000.000          0.0              NaT
+2020-10-07  100000.000          0.0              NaT
+...                ...          ...              ...
+2023-03-23  139752.804          0.0              NaT
+2023-03-24  139752.804          0.0              NaT
+2023-03-27  139752.804          0.0              NaT
+2023-03-28  139752.804          0.0              NaT
+2023-03-29  139752.804          0.0              NaT
+
+[606 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice        PnL  ReturnPct  \
+0  -616       230      262     162.175     131.25  19049.800   0.190689   
+1   876       371      383     135.771     130.00  -5055.396  -0.042505   
+2  -878       383      384     129.740     131.00  -1106.280  -0.009712   
+3   860       384      419     131.262     162.50  26864.680   0.237982   
+
+   EntryTime   ExitTime Duration  
+0 2021-09-09 2021-10-28  49 days  
+1 2022-04-14 2022-05-03  19 days  
+2 2022-05-03 2022-05-04   1 days  
+3 2022-05-04 2022-06-23  50 days  ",2753.TW,Ema,

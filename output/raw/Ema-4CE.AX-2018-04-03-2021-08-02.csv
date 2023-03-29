@@ -1,0 +1,28 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-04-03,2021-08-02,1217 days,2.2458628841607564,84234.25104999996,116953.59023199999,-15.765748950000038,-78.26086956521738,-4.98216071938844,21.36311983804972,0.0,0.0,0.0,-42.38107105876438,-42.38107105876438,634 days,634 days,5,40.0,24.750499001995998,-20.159680638722545,-3.373166412716022,7 days,4 days,0.8330166814034369,-1.6719683545400943,-0.38267061305922,"                  Equity  DrawdownPct DrawdownDuration
+Date                                                  
+2018-04-03  100000.00000     0.000000              NaT
+2018-04-04  100000.00000     0.000000              NaT
+2018-04-05  100000.00000     0.000000              NaT
+2018-04-06  100000.00000     0.000000              NaT
+2018-04-09  100000.00000     0.000000              NaT
+...                  ...          ...              ...
+2021-07-27   84234.25105     0.279763              NaT
+2021-07-28   84234.25105     0.279763              NaT
+2021-07-29   84234.25105     0.279763              NaT
+2021-07-30   84234.25105     0.279763              NaT
+2021-08-02   84234.25105     0.279763         634 days
+
+[846 rows x 3 columns]","      Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0  6237524       321      321    0.016032    0.01875  16953.590232   0.169536   
+1 -7812531       408      412    0.014970    0.01700 -15859.437930  -0.135605   
+2  5605131       660      665    0.018036    0.01440 -20380.256316  -0.201597   
+3 -4493091       746      748    0.017964    0.02090 -13191.715176  -0.163438   
+4  2246246       797      800    0.030060    0.03750  16712.070240   0.247505   
+
+   EntryTime   ExitTime Duration  
+0 2019-07-10 2019-07-10   0 days  
+1 2019-11-08 2019-11-14   6 days  
+2 2020-11-05 2020-11-12   7 days  
+3 2021-03-11 2021-03-15   4 days  
+4 2021-05-25 2021-05-28   3 days  ",4CE.AX,Ema,
