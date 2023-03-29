@@ -1,5 +1,5 @@
-,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_strategy,_equity_curve,_trades
-0,2018-03-29,2023-03-28,1825 days,29.809220985691574,71524.81848220002,107384.7741682,-28.47518151779998,966.3397587645136,-6.492795129343653,26.57799088098931,0.0,0.0,0.0,-60.58690675802217,-60.58690675802217,1663 days,1663 days,20,30.0,24.958735264519916,-17.09744552148791,-1.6598780565011406,100 days,26 days,0.9354011179141037,-0.4869267872150723,-0.652303240898585,Ema,"                   Equity  DrawdownPct DrawdownDuration
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-03-29,2023-03-28,1825 days,29.809220985691574,71524.81848220002,107384.7741682,-28.47518151779998,966.3397587645136,-6.492795129343653,26.57799088098931,0.0,0.0,0.0,-60.58690675802217,-60.58690675802217,1663 days,1663 days,20,30.0,24.958735264519916,-17.09744552148791,-1.6598780565011406,100 days,26 days,0.9354011179141037,-0.4869267872150723,-0.652303240898585,"                   Equity  DrawdownPct DrawdownDuration
 Date                                                   
 2018-03-29  100000.000000     0.000000              NaT
 2018-04-02  100000.000000     0.000000              NaT
@@ -55,4 +55,4 @@ Date
 16 2022-05-04 2022-05-12   8 days  
 17 2022-08-03 2022-09-01  29 days  
 18 2022-10-05 2022-11-08  34 days  
-19 2023-02-15 2023-03-02  15 days  "
+19 2023-02-15 2023-03-02  15 days  ",TSLA,Ema,

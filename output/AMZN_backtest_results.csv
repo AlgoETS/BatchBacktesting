@@ -1,5 +1,5 @@
-,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_strategy,_equity_curve,_trades
-0,2018-03-29,2023-03-28,1825 days,58.426073131955484,91738.1905046,121022.925616,-8.261809495399996,34.370638550720614,-1.7125367734986074,24.43459970497926,0.0,0.0,0.0,-48.598529354692985,-19.645042084809813,1352 days,322 days,19,31.57894736842105,25.831514671294254,-10.854633858915275,-0.45347931691861465,153 days,56 days,1.037480344850848,0.15929391426281178,-0.19718875585601983,Ema,"                   Equity  DrawdownPct DrawdownDuration
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-03-29,2023-03-28,1825 days,58.426073131955484,91738.1905046,121022.925616,-8.261809495399996,34.370638550720614,-1.7125367734986074,24.43459970497926,0.0,0.0,0.0,-48.598529354692985,-19.645042084809813,1352 days,322 days,19,31.57894736842105,25.831514671294254,-10.854633858915275,-0.45347931691861465,153 days,56 days,1.037480344850848,0.15929391426281178,-0.19718875585601983,"                   Equity  DrawdownPct DrawdownDuration
 Date                                                   
 2018-03-29  100000.000000     0.000000              NaT
 2018-04-02  100000.000000     0.000000              NaT
@@ -53,4 +53,4 @@ Date
 15 2022-08-05 2022-08-30  25 days  
 16 2022-09-21 2022-11-03  43 days  
 17 2023-02-16 2023-02-17   1 days  
-18 2023-02-17 2023-03-28  39 days  "
+18 2023-02-17 2023-03-28  39 days  ",AMZN,Ema,

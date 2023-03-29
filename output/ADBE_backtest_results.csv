@@ -1,5 +1,5 @@
-,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_strategy,_equity_curve,_trades
-0,2018-03-29,2023-03-28,1825 days,51.669316375198726,152333.30691999994,199131.72195999994,52.33330691999994,72.80636801184744,8.797044145461497,27.48895019884334,0.3200211023639474,0.5126509301269054,0.3397248987813943,-25.894611130996925,-5.856174412531654,308 days,33 days,18,33.33333333333333,25.77147345860389,-18.509778177043756,2.3668051421276814,156 days,52 days,1.73271076658449,3.493751758515974,0.6045649275547686,Ema,"                  Equity  DrawdownPct DrawdownDuration
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-03-29,2023-03-28,1825 days,51.669316375198726,152333.30691999994,199131.72195999994,52.33330691999994,72.80636801184744,8.797044145461497,27.48895019884334,0.3200211023639474,0.5126509301269054,0.3397248987813943,-25.894611130996925,-5.856174412531654,308 days,33 days,18,33.33333333333333,25.77147345860389,-18.509778177043756,2.3668051421276814,156 days,52 days,1.73271076658449,3.493751758515974,0.6045649275547686,"                  Equity  DrawdownPct DrawdownDuration
 Date                                                  
 2018-03-29  100000.00000     0.000000              NaT
 2018-04-02  100000.00000     0.000000              NaT
@@ -51,4 +51,4 @@ Date
 14 2022-08-30 2022-09-22  23 days  
 15 2023-01-13 2023-03-03  49 days  
 16 2023-03-03 2023-03-21  18 days  
-17 2023-03-22 2023-03-28   6 days  "
+17 2023-03-22 2023-03-28   6 days  ",ADBE,Ema,
