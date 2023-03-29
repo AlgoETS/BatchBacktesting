@@ -1,0 +1,27 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-04-03,2020-12-04,976 days,45.16616314199396,99279.63249999999,120844.4999,-0.7203675000000076,14.835164835164823,-0.2748325454599243,24.294032643523717,0.0,0.0,0.0,-29.232079200321138,-6.1713705135056145,618 days,97 days,5,40.0,25.668330124300887,-8.828958624105177,-0.14451167344982085,134 days,88 days,1.132766091636044,0.6119619769708518,-0.02463573982239571,"                 Equity  DrawdownPct DrawdownDuration
+2018-04-03  100000.0000     0.000000              NaT
+2018-04-04  100000.0000     0.000000              NaT
+2018-04-06  100000.0000     0.000000              NaT
+2018-04-09  100000.0000     0.000000              NaT
+2018-04-10  100000.0000     0.000000              NaT
+...                 ...          ...              ...
+2020-11-30   99279.6325     0.178451              NaT
+2020-12-01   99279.6325     0.178451              NaT
+2020-12-02   99279.6325     0.178451              NaT
+2020-12-03   99279.6325     0.178451              NaT
+2020-12-04   99279.6325     0.178451         618 days
+
+[662 rows x 3 columns]","    Size  EntryBar  ExitBar  EntryPrice  ExitPrice          PnL  ReturnPct  \
+0  31885       193      271     3.13626       3.15    438.09990   0.004381   
+1 -31949       271      365     3.14370       3.33  -5952.09870  -0.059261   
+2  28317       365      428     3.33666       3.06  -7834.18122  -0.082915   
+3 -28374       428      484     3.05388       2.27  22241.81112   0.256683   
+4  40855       575      581     2.66532       2.43  -9613.99860  -0.088290   
+
+   EntryTime   ExitTime Duration  
+0 2019-01-14 2019-05-14 120 days  
+1 2019-05-14 2019-09-25 134 days  
+2 2019-09-25 2019-12-27  93 days  
+3 2019-12-27 2020-03-19  83 days  
+4 2020-08-03 2020-08-11   8 days  ",1006.HK,Ema,

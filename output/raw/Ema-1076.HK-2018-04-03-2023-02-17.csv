@@ -1,0 +1,25 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-04-03,2023-02-17,1781 days,5.789909015715467,61611.60388000001,113107.00099999999,-38.38839611999999,-96.66666666666667,-9.602182880925048,16.81423480719827,0.0,0.0,0.0,-45.5280368719174,-45.5280368719174,1452 days,1452 days,4,0.0,-8.982035928143716,-15.312232677502113,-11.40379526838079,61 days,25 days,0.0,-11.371237321683974,-8.554641869591615,"                  Equity  DrawdownPct DrawdownDuration
+2018-04-03  100000.00000      0.00000              NaT
+2018-04-04  100000.00000      0.00000              NaT
+2018-04-06  100000.00000      0.00000              NaT
+2018-04-09  100000.00000      0.00000              NaT
+2018-04-10  100000.00000      0.00000              NaT
+...                  ...          ...              ...
+2023-02-13   61611.60388      0.45528              NaT
+2023-02-14   61611.60388      0.45528              NaT
+2023-02-15   61611.60388      0.45528              NaT
+2023-02-16   61611.60388      0.45528              NaT
+2023-02-17   61611.60388      0.45528        1452 days
+
+[1209 rows x 3 columns]","     Size  EntryBar  ExitBar  EntryPrice  ExitPrice          PnL  ReturnPct  \
+0   66533       221      228     1.50300      1.368  -8981.95500  -0.089820   
+1  -31020       348      368     2.93412      3.256  -9984.71760  -0.109702   
+2  115530       707      707     0.70140      0.594 -12407.92200  -0.153122   
+3 -312558       740      779     0.21956      0.242  -7013.80152  -0.102204   
+
+   EntryTime   ExitTime Duration  
+0 2019-02-26 2019-03-07   9 days  
+1 2019-09-02 2019-09-30  28 days  
+2 2021-02-10 2021-02-10   0 days  
+3 2021-03-31 2021-05-31  61 days  ",1076.HK,Ema,

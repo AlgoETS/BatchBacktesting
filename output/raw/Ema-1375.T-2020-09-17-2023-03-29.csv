@@ -1,0 +1,27 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2020-09-17,2023-03-29,923 days,50.405186385737444,103837.958,122802.788,3.837957999999999,-50.47846889952153,1.5500877778328315,13.113738641145229,0.11820334538079993,0.17715621664404516,0.08899743499882709,-17.417218573246075,-4.698061005557959,156 days,40 days,5,20.0,25.470776263270334,-8.051916471625276,0.7877235254568848,183 days,93 days,1.3993137191577953,1.4536883702739778,0.13508904185886145,"                Equity  DrawdownPct DrawdownDuration
+2020-09-17  100000.000     0.000000              NaT
+2020-09-18  100000.000     0.000000              NaT
+2020-09-23  100000.000     0.000000              NaT
+2020-09-24  100000.000     0.000000              NaT
+2020-09-25  100000.000     0.000000              NaT
+...                ...          ...              ...
+2023-03-23  101716.958     0.171705              NaT
+2023-03-24  103130.958     0.160190              NaT
+2023-03-27  103029.958     0.161013              NaT
+2023-03-28  103433.958     0.157723              NaT
+2023-03-29  103837.958     0.154433         156 days
+
+[617 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice        PnL  ReturnPct  \
+0    50       121      160    1973.940     1815.0  -7947.000  -0.080519   
+1   -50       160      285    1811.370     1350.0  23068.500   0.254708   
+2   113       471      542    1014.024      990.0  -2714.712  -0.023692   
+3  -113       542      577     988.020     1045.0  -6438.740  -0.057671   
+4   101       577      616    1047.090     1026.0  -2130.090  -0.020142   
+
+   EntryTime   ExitTime Duration  
+0 2021-03-19 2021-05-19  61 days  
+1 2021-05-19 2021-11-18 183 days  
+2 2022-08-24 2022-12-08 106 days  
+3 2022-12-08 2023-01-31  54 days  
+4 2023-01-31 2023-03-29  57 days  ",1375.T,Ema,
