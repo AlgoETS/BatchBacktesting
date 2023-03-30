@@ -1,0 +1,29 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-03-30,2023-03-29,1825 days,28.814935064935064,74333.4,107510.2,-25.666600000000006,-45.68,-5.886641393409786,13.22652430942842,0.0,0.0,0.0,-30.859211498071815,-5.157919528250217,916 days,95 days,6,0.0,-0.48305355421705,-11.890447561790252,-5.722315775881615,174 days,87 days,0.0,-5.642236831161126,-3.281783023524664,"              Equity  DrawdownPct DrawdownDuration
+2018-03-30  100000.0     0.000000              NaT
+2018-04-02  100000.0     0.000000              NaT
+2018-04-03  100000.0     0.000000              NaT
+2018-04-04  100000.0     0.000000              NaT
+2018-04-05  100000.0     0.000000              NaT
+...              ...          ...              ...
+2023-03-23   74333.4     0.308592              NaT
+2023-03-24   74333.4     0.308592              NaT
+2023-03-27   74333.4     0.308592              NaT
+2023-03-28   74333.4     0.308592              NaT
+2023-03-29   74333.4     0.308592         916 days
+
+[1232 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice     PnL  ReturnPct  \
+0     1       521      538     74148.0    70900.0 -3248.0  -0.043804   
+1    -1       538      632     70758.2    71100.0  -341.8  -0.004831   
+2     1       632      635     71242.2    64440.0 -6802.2  -0.095480   
+3    -1       836      950     78143.4    81000.0 -2856.6  -0.036556   
+4     1       950     1019     81162.0    78000.0 -3162.0  -0.038959   
+5    -1      1019     1075     77844.0    87100.0 -9256.0  -0.118904   
+
+   EntryTime   ExitTime Duration  
+0 2020-05-18 2020-06-10  23 days  
+1 2020-06-10 2020-10-27 139 days  
+2 2020-10-27 2020-10-30   3 days  
+3 2021-08-20 2022-02-10 174 days  
+4 2022-02-10 2022-05-20  99 days  
+5 2022-05-20 2022-08-10  82 days  ",005610.KS,Ema,

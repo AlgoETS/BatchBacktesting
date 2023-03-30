@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-10-04,2022-03-01,1244 days,2.4970273483947683,72060.02901999999,117309.19968,-27.939970980000012,-85.59055118110236,-9.351819191746202,15.467025734654177,0.0,0.0,0.0,-38.572567866315886,-38.572567866315886,890 days,890 days,3,0.0,-10.179640718562865,-10.64025794564717,-10.347021827352233,17 days,8 days,0.0,-10.346779848657855,-19.965896626875438,"                  Equity  DrawdownPct DrawdownDuration
+Date                                                  
+2018-10-04  100000.00000     0.000000              NaT
+2018-10-05  100000.00000     0.000000              NaT
+2018-10-08  100000.00000     0.000000              NaT
+2018-10-09  100000.00000     0.000000              NaT
+2018-10-10  100000.00000     0.000000              NaT
+...                  ...          ...              ...
+2022-02-23   72060.02902     0.385726              NaT
+2022-02-24   72060.02902     0.385726              NaT
+2022-02-25   72060.02902     0.385726              NaT
+2022-02-28   72060.02902     0.385726              NaT
+2022-03-01   72060.02902     0.385726         890 days
+
+[841 rows x 3 columns]","     Size  EntryBar  ExitBar  EntryPrice  ExitPrice          PnL  ReturnPct  \
+0   87544       235      240     1.14228     1.0260 -10179.61632  -0.101796   
+1 -230770       262      262     0.38922     0.4290  -9180.03060  -0.102204   
+2  412714       402      415     0.19539     0.1746  -8580.32406  -0.106403   
+
+   EntryTime   ExitTime Duration  
+0 2019-09-18 2019-09-25   7 days  
+1 2019-10-29 2019-10-29   0 days  
+2 2020-05-25 2020-06-11  17 days  ",1781.HK,Ema,

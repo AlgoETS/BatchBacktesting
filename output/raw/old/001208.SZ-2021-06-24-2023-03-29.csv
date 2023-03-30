@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-06-24,2023-03-29,643 days,41.05504587155963,86785.94764,114406.8064,-13.21405236,90.71969696969695,-7.864947349963858,22.039104121558612,0.0,0.0,0.0,-24.142670903188503,-15.621733025789236,258 days,135 days,3,33.33333333333333,0.891701659449684,-8.784230394484938,-4.614641628382743,159 days,89 days,0.061571078949493714,-4.530258039182825,-1.5719505684083068,"                  Equity  DrawdownPct DrawdownDuration
+Date                                                  
+2021-06-24  100000.00000     0.000000              NaT
+2021-06-25  100000.00000     0.000000              NaT
+2021-06-28  100000.00000     0.000000              NaT
+2021-06-29  100000.00000     0.000000              NaT
+2021-06-30  100000.00000     0.000000              NaT
+...                  ...          ...              ...
+2023-03-23   88978.52764     0.222262              NaT
+2023-03-24   88303.88764     0.228159              NaT
+2023-03-27   88978.52764     0.222262              NaT
+2023-03-28   86785.94764     0.241427              NaT
+2023-03-29   86785.94764     0.241427         258 days
+
+[436 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice         PnL  ReturnPct  \
+0  8160       254      295    12.25446     11.178 -8783.91360  -0.087842   
+1 -8301       299      400    10.98798     10.890   813.33198   0.008917   
+2  8433       400      435    10.91178     10.290 -5243.47074  -0.056982   
+
+   EntryTime   ExitTime Duration  
+0 2022-07-01 2022-08-29  59 days  
+1 2022-09-02 2023-02-08 159 days  
+2 2023-02-08 2023-03-29  49 days  ",001208.SZ,Ema,

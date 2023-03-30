@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2022-01-27,2023-03-29,426 days,23.693379790940767,87829.68143438202,104287.62200877999,-12.170318565617984,-20.102040816326536,-10.76929612876486,21.405803928174834,0.0,0.0,0.0,-23.164642504135468,-14.95815546146651,160 days,90 days,3,33.33333333333333,9.610199496903615,-11.23884301861745,-4.2340704214567815,42 days,32 days,0.4583799556268273,-3.785125283114469,-0.6899764928215122,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2022-01-27  100000.000000     0.000000              NaT
+2022-01-28  100000.000000     0.000000              NaT
+2022-01-31  100000.000000     0.000000              NaT
+2022-02-04  100000.000000     0.000000              NaT
+2022-02-07  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2023-03-23   84915.125850     0.185760              NaT
+2023-03-24   82972.081434     0.204392              NaT
+2023-03-27   84826.801434     0.186607              NaT
+2023-03-28   88447.921434     0.151885              NaT
+2023-03-29   87829.681434     0.157813         160 days
+
+[287 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0 -5610       163      185   17.824281  19.558001  -9726.169772  -0.097267   
+1  4249       189      202   21.242401  18.855001 -10144.063033  -0.112388   
+2 -4416       256      286   18.143640  16.400000   7699.914240   0.096102   
+
+   EntryTime   ExitTime Duration  
+0 2022-09-28 2022-10-31  33 days  
+1 2022-11-04 2022-11-23  19 days  
+2 2023-02-15 2023-03-29  42 days  ",2121.HK,Ema,

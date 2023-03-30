@@ -1,0 +1,23 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-12-12,2023-03-29,472 days,35.2760736196319,97920.33771279201,102123.33771279201,-2.0796622872079897,13.22834881889764,-2.3255418605012346,22.68916063414913,0.0,0.0,0.0,-20.75966228720799,-8.943285404505641,134 days,54 days,3,33.33333333333333,18.192243100304484,-10.932326537508896,-0.6947777421467349,134 days,54 days,1.0160017780672543,0.09550778450748698,-0.08742323475794514,"                   Equity  DrawdownPct DrawdownDuration
+2021-12-12  100000.000000     0.000000              NaT
+2021-12-13  100000.000000     0.000000              NaT
+2021-12-14  100000.000000     0.000000              NaT
+2021-12-15  100000.000000     0.000000              NaT
+2021-12-16  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2023-03-23   99881.736312     0.021950              NaT
+2023-03-26   99881.736312     0.021950              NaT
+2023-03-27   99881.736312     0.021950              NaT
+2023-03-28   99881.736312     0.021950              NaT
+2023-03-29   97920.337713     0.041156          10 days
+
+[326 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice   ExitPrice           PnL  ReturnPct  \
+0  -498       210      212  200.797597  214.800003  -6973.198185  -0.069734   
+1   432       212      229  215.229603  191.700000 -10164.788499  -0.109323   
+2  -467       231      325  177.244806  145.000000  15058.324396   0.181922   
+
+   EntryTime   ExitTime Duration  
+0 2022-10-17 2022-10-19   2 days  
+1 2022-10-19 2022-11-13  25 days  
+2 2022-11-15 2023-03-29 134 days  ",1111.SR,Ema,

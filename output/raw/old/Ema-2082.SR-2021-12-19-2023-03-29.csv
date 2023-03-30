@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-12-19,2023-03-29,465 days,28.482972136222912,83963.26655548597,111732.658459864,-16.036733444514027,74.96871026361175,-17.923545348944536,14.463098635908848,0.0,0.0,0.0,-30.238600217781986,-11.176383862499213,114 days,42 days,3,33.33333333333333,5.290032119032584,-12.240201585671674,-5.669727989259887,55 days,43 days,0.24717914974815255,-5.370526440394011,-1.1104068544937011,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2021-12-19  100000.000000     0.000000              NaT
+2021-12-20  100000.000000     0.000000              NaT
+2021-12-21  100000.000000     0.000000              NaT
+2021-12-22  100000.000000     0.000000              NaT
+2021-12-23  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2023-03-23   83306.868196     0.254409              NaT
+2023-03-26   83306.868196     0.254409              NaT
+2023-03-27   83306.868196     0.254409              NaT
+2023-03-28   83306.868196     0.254409              NaT
+2023-03-29   83963.266555     0.248534         114 days
+
+[323 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice   ExitPrice           PnL  ReturnPct  \
+0  -678       230      268  147.304806  160.800003  -9149.743574  -0.091614   
+1   563       268      284  161.121603  141.399994 -11103.265870  -0.122402   
+2  -547       286      322  145.708000  138.000000   4216.276000   0.052900   
+
+   EntryTime   ExitTime Duration  
+0 2022-11-17 2023-01-11  55 days  
+1 2023-01-11 2023-02-02  22 days  
+2 2023-02-06 2023-03-29  51 days  ",2082.SR,Ema,

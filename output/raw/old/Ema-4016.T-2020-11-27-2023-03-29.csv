@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2020-11-27,2023-03-29,852 days,14.535901926444833,95965.406,132783.686,-4.034593999999998,-73.53333333333333,-1.801090513782555,17.712953338561313,0.0,0.0,0.0,-35.371815179162894,-5.189982350190034,91 days,16 days,3,66.66666666666666,11.897417286638845,-20.60896899881801,-1.3930791740774384,115 days,39 days,0.9619385620548094,-0.2614689982209558,-0.12932639521074568,"                Equity  DrawdownPct DrawdownDuration
+Date                                                
+2020-11-27  100000.000      0.00000              NaT
+2020-11-30  100000.000      0.00000              NaT
+2020-12-01  100000.000      0.00000              NaT
+2020-12-02  100000.000      0.00000              NaT
+2020-12-03  100000.000      0.00000              NaT
+...                ...          ...              ...
+2023-03-23   95965.406      0.27728              NaT
+2023-03-24   95965.406      0.27728              NaT
+2023-03-27   95965.406      0.27728              NaT
+2023-03-28   95965.406      0.27728              NaT
+2023-03-29   95965.406      0.27728          91 days
+
+[571 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice        PnL  ReturnPct  \
+0    99       363      364    1009.014     1089.0   7918.614   0.079271   
+1  -152       466      544     705.586      851.0 -22102.928  -0.206090   
+2    86       545      546     991.980     1110.0  10149.720   0.118974   
+
+   EntryTime   ExitTime Duration  
+0 2022-05-26 2022-05-27   1 days  
+1 2022-10-25 2023-02-17 115 days  
+2 2023-02-20 2023-02-21   1 days  ",4016.T,Ema,

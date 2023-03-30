@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-04-03,2023-02-17,1781 days,5.223880597014925,137620.23612000002,137620.23612000002,37.620236120000015,-87.5,6.900168746503255,9.520312096368844,0.7247838806812917,1.3138249565271116,0.384705935336001,-17.936215983974012,-7.80440092465426,106 days,40 days,3,66.66666666666666,27.060002357656497,-13.246677376953386,11.231422782794942,72 days,30 days,3.9186960080092814,12.887674793166903,0.8538823991013449,"                  Equity  DrawdownPct DrawdownDuration
+Date                                                  
+2018-04-03  100000.00000          0.0              NaT
+2018-04-04  100000.00000          0.0              NaT
+2018-04-06  100000.00000          0.0              NaT
+2018-04-09  100000.00000          0.0              NaT
+2018-04-10  100000.00000          0.0              NaT
+...                  ...          ...              ...
+2023-02-13  137620.23612          0.0              NaT
+2023-02-14  137620.23612          0.0              NaT
+2023-02-15  137620.23612          0.0              NaT
+2023-02-16  137620.23612          0.0              NaT
+2023-02-17  137620.23612          0.0              NaT
+
+[1206 rows x 3 columns]","     Size  EntryBar  ExitBar  EntryPrice  ExitPrice          PnL  ReturnPct  \
+0 -196471       239      244    0.508980    0.37125  27059.95083   0.270600   
+1  618567       497      502    0.205410    0.17820 -16831.20807  -0.132467   
+2 -717205       528      578    0.153692    0.11550  27391.49336   0.248497   
+
+   EntryTime   ExitTime Duration  
+0 2019-03-22 2019-03-29   7 days  
+1 2020-04-07 2020-04-16   9 days  
+2 2020-05-26 2020-08-06  72 days  ",0395.HK,Ema,

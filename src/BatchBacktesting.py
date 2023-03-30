@@ -48,76 +48,138 @@ def run_backtests_strategies(instruments, strategies):
         strategies (list): List of strategies to run backtests for
 
     Returns:
-        None
+        List of outputs from run_backtests()
 
     """
-    return [
-        run_backtests(instruments, strategy, 4, False)
-        for strategy in track(strategies)
-    ]
 
-
-def run_backtests(instruments, strategy=Ema, num_threads=4, generate_plots=True):
-    """Run backtests for a list of instruments using a specified strategy."""
-
+    # find strategies in the STRATEGIES
+    strategies = [x for x in STRATEGIES if x.__name__ in strategies]
     outputs = []
-    metric = "Equity Final [$]"
-    # create the output directory if it doesn't exist
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        futures = []
+        for strategy in strategies:
+            future = executor.submit(run_backtests, instruments, strategy, 4)
+            futures.append(future)
+
+        for future in concurrent.futures.as_completed(futures):
+            outputs.extend(future.result())
+
+    return outputs
+
+
+
+
+def process_instrument(instrument, strategy):
+    """
+    Process a single instrument for a backtest using a specified strategy.
+    Returns a Pandas dataframe of the backtest results.
+    """
+    try:
+        data = get_historical_price_full_stock(instrument)
+        data = clean_data(data)
+        bt = Backtest(
+            data, strategy=strategy, cash=100000, commission=0.002, exclusive_orders=True
+        )
+        output = bt.run()
+        output = process_output(output, instrument, strategy)
+        return output, bt
+    except Exception as e:
+        print(f"Error processing {instrument}: {str(e)}")
+        return None
+
+
+def process_instrument_optimise(instrument, strategy):
+    """
+    Process a single instrument for a backtest using a specified strategy.
+    Returns a Pandas dataframe of the backtest results.
+    """
+    try:
+        data = get_historical_price_full_stock(instrument)
+        data = clean_data(data)
+        bt = Backtest(
+            data, strategy=strategy, cash=100000, commission=0.002, exclusive_orders=True
+        )
+        output = bt.optimize_func()
+        output = process_output(output, instrument, strategy)
+        return output, bt
+    except Exception as e:
+        print(f"Error processing {instrument}: {str(e)}")
+        return None
+
+
+def clean_data(data):
+    """
+    Clean historical price data for use in a backtest.
+    Returns a Pandas dataframe of the cleaned data.
+    """
+    data = data["historical"]
+    data = pd.DataFrame(data)
+    data.columns = [x.title() for x in data.columns]
+    data = data.drop(
+        [
+            "Adjclose",
+            "Unadjustedvolume",
+            "Change",
+            "Changepercent",
+            "Vwap",
+            "Label",
+            "Changeovertime",
+        ],
+        axis=1,
+    )
+    data["Date"] = pd.to_datetime(data["Date"])
+    data.set_index("Date", inplace=True)
+    data = data.iloc[::-1]
+    return data
+
+
+def process_output(output, instrument, strategy, in_row=True):
+    """
+    Process backtest output data to include instrument name, strategy name,
+    and parameters.
+    Returns a Pandas dataframe of the processed output.
+    """
+    if in_row:
+        output = pd.DataFrame(output).T
+    output["Instrument"] = instrument
+    output["Strategy"] = strategy.__name__
+    output.pop("_strategy")
+    output["StrategyParameters"] = strategy.__dict__
+    return output
+
+
+def save_output(output, output_dir, instrument):
+    """
+    Save backtest output to file and generate chart if specified.
+    """
+    start = output["Start"].to_string().strip().split()[1]
+    end = output["End"].to_string().strip().split()[1]
+    fileNameOutput = f"{output_dir}/{instrument}-{start}-{end}.csv"
+    output.to_csv(fileNameOutput)
+
+
+def plot_results(bt, output_dir, instrument, start, end):
+    fileNameChart = f"{output_dir}/{instrument}-{start}-{end}.html"
+    bt.plot(filename=fileNameChart, open_browser=False)
+
+def run_backtests(instruments, strategy=EMA, num_threads=4, generate_plots=False):
+    """
+    Run backtests for a list of instruments using a specified strategy.
+    Returns a list of Pandas dataframes of the backtest results.
+
+    Args:
+        instruments (list): List of instruments to run backtests for
+
+    Returns:
+        List of Pandas dataframes of the backtest results
+    """
+    outputs = []
     output_dir = f"output/raw/{strategy.__name__}"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-
-    def process_instrument(instrument):
-        fileName = f"{output_dir}/{instrument}-*.csv"
-        existingFiles = glob.glob(fileName)
-        if existingFiles:
-            print(f"{fileName} already exists. Skipping...")
-            return None
-
-        try:
-            data = get_historical_price_full_stock(instrument)
-            data = data["historical"]
-            data = pd.DataFrame(data)
-            data.columns = [x.title() for x in data.columns]  # uppercase first letter
-            data = data.drop(
-                [
-                    "Adjclose",
-                    "Unadjustedvolume",
-                    "Change",
-                    "Changepercent",
-                    "Vwap",
-                    "Label",
-                    "Changeovertime",
-                ],
-                axis=1,
-            )
-            data["Date"] = pd.to_datetime(data["Date"])
-            data.set_index("Date", inplace=True)  # date needs to be set as index!
-            data = data.iloc[::-1]  # to reverse the order of the dataframe
-
-            # Create a backtest for the instrument using the specified strategy
-            bt = Backtest(
-                data, strategy=strategy, cash=100000, commission=0.002, exclusive_orders=True
-            )
-            output = bt.run()
-            output = pd.DataFrame(pd.DataFrame(output).T)
-
-            # Add instrument name, strategy name, and parameters to output
-            output["Instrument"] = instrument
-            output["Strategy"] = strategy.__name__
-            output.pop("_strategy")
-            output["StrategyParameters"] = strategy.__dict__
-
-            # Append output to list of outputs
-            return output
-
-        except Exception as e:
-            print(f"Error processing {instrument}: {str(e)}")
-            return None
-
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
         future_to_instrument = {
-            executor.submit(process_instrument, instrument): instrument
+            executor.submit(process_instrument, instrument, strategy): instrument
             for instrument in instruments
         }
         for future in concurrent.futures.as_completed(future_to_instrument):
@@ -125,27 +187,42 @@ def run_backtests(instruments, strategy=Ema, num_threads=4, generate_plots=True)
             output = future.result()
             if output is not None:
                 outputs.append(output)
-
-                # Save output to file
-                start = output["Start"].to_string().strip().split()[1]
-                end = output["End"].to_string().strip().split()[1]
-                fileNameOutput = (
-                    f"{output_dir}/{instrument}-{start}-{end}.csv"
-                )
-                output.to_csv(fileNameOutput)
-
-                # Plot and save chart to file
-                if generate_plots:
-                    fileNameChart = f"{output_dir}/{instrument}-{start}-{end}.html"
-                    bt.plot(filename=fileNameChart, open_browser=False)
-
-    # Combine all the dataframes into one
+                save_output(output, output_dir, instrument, output[1], generate_plots)
     data_frame = pd.concat(outputs)
-
-    # Save the data to a CSV file
     start = data_frame["Start"].to_string().strip().split()[1]
     end = data_frame["End"].to_string().strip().split()[1]
     fileNameOutput = f"output/{strategy.__name__}-{start}-{end}.csv"
-    data_frame.to_csv(fileNameOutput)
+    if generate_plots:
+        plot_results(output[1], output_dir, instrument, start, end)
 
-    return outputs
+    return data_frame
+
+
+def run_backtests_optimise(instruments, strategy=EMA, num_threads=4, generate_plots=False):
+    """
+    Run backtests for a list of instruments using a specified strategy.
+    Returns a list of Pandas dataframes of the backtest results.
+    """
+    outputs = []
+    output_dir = f"output/raw/{strategy.__name__}"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
+        future_to_instrument = {
+            executor.submit(process_instrument_optimise, instrument, strategy): instrument
+            for instrument in instruments
+        }
+        for future in track(concurrent.futures.as_completed(future_to_instrument)):
+            instrument = future_to_instrument[future]
+            output = future.result()
+            if output is not None:
+                outputs.append(output)
+                save_output(output, output_dir, instrument, output[1], generate_plots)
+    data_frame = pd.concat(outputs)
+    start = data_frame["Start"].to_string().strip().split()[1]
+    end = data_frame["End"].to_string().strip().split()[1]
+    fileNameOutput = f"output/{strategy.__name__}-{start}-{end}.csv"
+    if generate_plots:
+        plot_results(output[1], output_dir, instrument, start, end)
+
+    return data_frame

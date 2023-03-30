@@ -1,0 +1,23 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-04-03,2022-03-03,1430 days,2.5853154084798344,134958.255536,159644.36957,34.95825553600001,-83.11688311688312,8.125953751651771,21.348179653113874,0.38063918721362777,0.9279382125466644,0.5255030265398244,-15.463191154496537,-6.835941191606122,597 days,103 days,3,66.66666666666666,27.869261477045914,-15.463191264529764,10.5095564249158,30 days,11 days,3.4093195883034104,12.418589870437913,0.640106888561024,"                   Equity  DrawdownPct DrawdownDuration
+2018-04-03  100000.000000     0.000000              NaT
+2018-04-04  100000.000000     0.000000              NaT
+2018-04-06  100000.000000     0.000000              NaT
+2018-04-09  100000.000000     0.000000              NaT
+2018-04-10  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2022-02-25  134958.255536     0.154632              NaT
+2022-02-28  134958.255536     0.154632              NaT
+2022-03-01  134958.255536     0.154632              NaT
+2022-03-02  134958.255536     0.154632              NaT
+2022-03-03  134958.255536     0.154632         597 days
+
+[967 rows x 3 columns]","      Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0  2495009       232      232    0.040080    0.05125  27869.250530   0.278693   
+1 -4575910       272      293    0.027944    0.02100  31775.119040   0.248497   
+2  9372101       562      563    0.017034    0.01440 -24686.114034  -0.154632   
+
+   EntryTime   ExitTime Duration  
+0 2019-03-13 2019-03-13   0 days  
+1 2019-05-15 2019-06-14  30 days  
+2 2020-07-15 2020-07-16   1 days  ",0706.HK,Ema,

@@ -2,7 +2,7 @@ import os
 import python_dotenv
 
 # Load .env file
-python_dotenv.load_dotenv(".env.exemple")
+python_dotenv.load_dotenv("../.env.exemple")
 
 
 BASE_URL_FMP = "https://financialmodelingprep.com/api/v3"

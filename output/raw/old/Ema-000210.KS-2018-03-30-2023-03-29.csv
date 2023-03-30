@@ -1,0 +1,29 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-03-30,2023-03-29,1825 days,20.29220779220779,71305.6,105535.8,-28.69439999999999,-29.435483870967744,-6.683786538625236,13.777113829884163,0.0,0.0,0.0,-42.38391143100255,-15.62381524003321,1636 days,554 days,6,16.666666666666664,14.254738986169057,-11.63266129574585,-6.7974012158931725,142 days,61 days,0.2712005164814826,-6.3844804732151195,-1.755950321019641,"              Equity  DrawdownPct DrawdownDuration
+2018-03-30  100000.0     0.000000              NaT
+2018-04-02  100000.0     0.000000              NaT
+2018-04-03  100000.0     0.000000              NaT
+2018-04-04  100000.0     0.000000              NaT
+2018-04-05  100000.0     0.000000              NaT
+...              ...          ...              ...
+2023-03-23   71705.6     0.320557              NaT
+2023-03-24   72405.6     0.313924              NaT
+2023-03-27   72005.6     0.317714              NaT
+2023-03-28   71305.6     0.324347              NaT
+2023-03-29   71305.6     0.324347        1636 days
+
+[1232 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice     PnL  ReturnPct  \
+0     1       106      141     82264.2    73710.0 -8554.2  -0.103984   
+1    -1       142      153     75349.0    82610.0 -7261.0  -0.096365   
+2    -1       694      701     74850.0    83500.0 -8650.0  -0.115564   
+3     1      1010     1107     64128.0    58140.0 -5988.0  -0.093376   
+4    -1      1108     1137     59480.8    66400.0 -6919.2  -0.116327   
+5    -1      1166     1231     60878.0    52200.0  8678.0   0.142547   
+
+   EntryTime   ExitTime Duration  
+0 2018-09-04 2018-10-30  56 days  
+1 2018-10-31 2018-11-15  15 days  
+2 2021-01-26 2021-02-04   9 days  
+3 2022-05-09 2022-09-28 142 days  
+4 2022-09-29 2022-11-11  43 days  
+5 2022-12-22 2023-03-29  97 days  ",000210.KS,Ema,

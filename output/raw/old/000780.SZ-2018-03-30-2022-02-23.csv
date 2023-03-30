@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-03-30,2022-02-23,1426 days,28.884462151394423,204988.83534646773,204988.83534646773,104.98883534646772,147.0223971290085,19.74104397019374,19.862507294694236,0.9938847939639049,1.9568867823824545,1.9667219151597717,-10.037536988847773,-6.314546999149079,84 days,33 days,3,100.0,31.350590454943617,24.75049900199602,27.031553777712002,251 days,134 days,,27.06733707033495,7.047545369953309,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2018-03-30  100000.000000          0.0              NaT
+2018-04-02  100000.000000          0.0              NaT
+2018-04-03  100000.000000          0.0              NaT
+2018-04-04  100000.000000          0.0              NaT
+2018-04-05  100000.000000          0.0              NaT
+...                   ...          ...              ...
+2022-02-17  204988.835346          0.0              NaT
+2022-02-18  204988.835346          0.0              NaT
+2022-02-21  204988.835346          0.0              NaT
+2022-02-22  204988.835346          0.0              NaT
+2022-02-23  204988.835346          0.0              NaT
+
+[1004 rows x 3 columns]","    Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0  29682       237      273    3.368947   4.214583  25100.187542   0.251009   
+1 -37177       303      482    3.364923   2.310000  39218.884765   0.313506   
+2  67486       608      680    2.434860   3.037500  40669.763040   0.247505   
+
+   EntryTime   ExitTime Duration  
+0 2019-02-26 2019-04-17  50 days  
+1 2019-05-29 2020-02-04 251 days  
+2 2020-07-29 2020-11-06 100 days  ",000780.SZ,Ema,

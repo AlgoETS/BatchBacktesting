@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-07-07,2023-03-29,630 days,10.023310023310025,70924.18406000003,100000.0,-29.07581593999997,-60.42553191489362,-18.27503899677303,11.521952400011706,0.0,0.0,0.0,-29.07581593999997,-29.07581593999997,268 days,268 days,3,0.0,-9.931148386010857,-12.132257224681064,-10.820953504308338,29 days,20 days,0.0,-10.815882838135371,-7.887711454978448,"                  Equity  DrawdownPct DrawdownDuration
+Date                                                  
+2021-07-07  100000.00000     0.000000              NaT
+2021-07-08  100000.00000     0.000000              NaT
+2021-07-09  100000.00000     0.000000              NaT
+2021-07-12  100000.00000     0.000000              NaT
+2021-07-13  100000.00000     0.000000              NaT
+...                  ...          ...              ...
+2023-03-23   70924.18406     0.290758              NaT
+2023-03-24   70924.18406     0.290758              NaT
+2023-03-27   70924.18406     0.290758              NaT
+2023-03-28   70924.18406     0.290758              NaT
+2023-03-29   70924.18406     0.290758         268 days
+
+[429 rows x 3 columns]","    Size  EntryBar  ExitBar  EntryPrice  ExitPrice          PnL  ReturnPct  \
+0  21695       245      254     4.60920      4.050 -12131.84400  -0.121323   
+1 -23108       264      285     3.80238      4.180  -8726.04296  -0.099311   
+2  17991       357      367     4.39878      3.942  -8217.92898  -0.103842   
+
+   EntryTime   ExitTime Duration  
+0 2022-07-05 2022-07-18  13 days  
+1 2022-08-01 2022-08-30  29 days  
+2 2022-12-12 2022-12-28  16 days  ",2219.HK,Ema,

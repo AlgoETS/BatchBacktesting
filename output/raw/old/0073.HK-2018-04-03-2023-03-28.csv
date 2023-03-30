@@ -1,0 +1,26 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-04-03,2023-03-28,1820 days,1.7813765182186234,105784.77720399997,109961.08482999998,5.784777203999969,-87.16666666666667,1.1541055934234157,9.56715143237868,0.12063210262539667,0.16815901646109677,0.10338131458265092,-11.16358017000002,-10.461312982846277,143 days,96 days,4,50.0,23.531273072460714,-10.985204478934518,1.415847013869076,13 days,7 days,1.473329335046448,2.291912471261537,0.19479038839877166,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2018-04-03  100000.000000     0.000000              NaT
+2018-04-04  100000.000000     0.000000              NaT
+2018-04-06  100000.000000     0.000000              NaT
+2018-04-09  100000.000000     0.000000              NaT
+2018-04-10  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2023-03-22  105784.777204     0.037980              NaT
+2023-03-23  105784.777204     0.037980              NaT
+2023-03-24  101851.870204     0.073746              NaT
+2023-03-27  101851.870204     0.073746              NaT
+2023-03-28  105784.777204     0.037980          49 days
+
+[1235 rows x 3 columns]","      Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0   447535       722      722    0.223446     0.1989 -10985.194110  -0.109852   
+1  -312958       809      817    0.284430     0.2175  20946.278940   0.235313   
+2  1097416      1200     1201    0.100200     0.0918  -9218.294400  -0.083832   
+3 -1310969      1225     1234    0.076846     0.0730   5041.986774   0.050048   
+
+   EntryTime   ExitTime Duration  
+0 2021-03-08 2021-03-08   0 days  
+1 2021-07-15 2021-07-27  12 days  
+2 2023-02-08 2023-02-09   1 days  
+3 2023-03-15 2023-03-28  13 days  ",0073.HK,Ema,

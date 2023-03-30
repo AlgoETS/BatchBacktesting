@@ -1,10 +1,26 @@
 import typer
 import rich
+from data import get_financial_statements_lists
 from BatchBacktesting import run_backtests, run_backtests_strategies
-from strategies import Ema
+from strategies import *
 
 app = typer.Typer()
 
+@app.command(help="All available strategies")
+def strategies():
+    """
+    List all available strategies.
+    """
+    typer.echo(f"Available strategies: {', '.join([x.__name__ for x in STRATEGIES])}")
+
+@app.command(help="All financial statements")
+def financial_statements():
+    """
+    List all available financial statements.
+    """
+    typer.echo(
+        f"Available financial statements: {', '.join(list(get_financial_statements_lists))}"
+    )
 
 @app.command(help="Run backtests for a list of instruments using a specified strategy")
 def run_backtests(

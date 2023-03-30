@@ -1,0 +1,28 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-05-27,2023-03-29,671 days,57.89473684210527,82016.64000000001,103150.84000000001,-17.983359999999987,-28.499999999999996,-10.376992892349312,10.045077632241926,0.0,0.0,0.0,-21.942816946522193,-6.985889652476075,167 days,63 days,5,20.0,6.74212955383362,-8.959858061654469,-4.130744173214684,174 days,77 days,0.2531313929288046,-3.978554260143885,-1.47719444491953,"               Equity  DrawdownPct DrawdownDuration
+Date                                               
+2021-05-27  100000.00     0.000000              NaT
+2021-05-28  100000.00     0.000000              NaT
+2021-05-31  100000.00     0.000000              NaT
+2021-06-01  100000.00     0.000000              NaT
+2021-06-02  100000.00     0.000000              NaT
+...               ...          ...              ...
+2023-03-23   84616.64     0.179681              NaT
+2023-03-24   83816.64     0.187436              NaT
+2023-03-27   83716.64     0.188406              NaT
+2023-03-28   81816.64     0.206825              NaT
+2023-03-29   82016.64     0.204886         167 days
+
+[456 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice      PnL  ReturnPct  \
+0   -10       192      225     9600.76      10150 -5492.40  -0.057208   
+1     9       225      245    10170.30       9670 -4502.70  -0.049192   
+2    -9       245      362     9650.66       9000  5855.94   0.067421   
+3    10       362      398     9018.00       8210 -8080.00  -0.089599   
+4   -10       398      455     8193.58       8770 -5764.20  -0.070350   
+
+   EntryTime   ExitTime Duration  
+0 2022-03-10 2022-04-26  47 days  
+1 2022-04-26 2022-05-24  28 days  
+2 2022-05-24 2022-11-14 174 days  
+3 2022-11-14 2023-01-04  51 days  
+4 2023-01-04 2023-03-29  84 days  ",383800.KS,Ema,

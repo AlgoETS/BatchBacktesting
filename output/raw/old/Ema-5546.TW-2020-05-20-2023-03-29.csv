@@ -1,0 +1,24 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2020-05-20,2023-03-29,1043 days,40.40114613180516,145822.592,145822.592,45.82259200000001,-31.5553448221558,14.589789393259899,14.29155610293753,1.0208677969126867,1.9275419979866597,1.6983700615056867,-8.590465484492437,-3.0859820787298275,89 days,26 days,3,66.66666666666666,24.849699398797597,-6.437125748502992,13.40342875205156,222 days,135 days,7.7207438132078146,14.420757683030736,1.3037221443041378,"                Equity  DrawdownPct DrawdownDuration
+Date                                                
+2020-05-20  100000.000          0.0              NaT
+2020-05-21  100000.000          0.0              NaT
+2020-05-22  100000.000          0.0              NaT
+2020-05-25  100000.000          0.0              NaT
+2020-05-26  100000.000          0.0              NaT
+...                ...          ...              ...
+2023-03-23  145822.592          0.0              NaT
+2023-03-24  145822.592          0.0              NaT
+2023-03-27  145822.592          0.0              NaT
+2023-03-28  145822.592          0.0              NaT
+2023-03-29  145822.592          0.0              NaT
+
+[698 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice  ExitPrice        PnL  ReturnPct  \
+0 -1252       227      328      79.840       60.0  24839.680   0.248497   
+1  1946       432      457      64.128       60.0  -8033.088  -0.064371   
+2 -1950       457      611      59.880       45.0  29016.000   0.248497   
+
+   EntryTime   ExitTime Duration  
+0 2021-04-27 2021-09-17 143 days  
+1 2022-02-25 2022-04-06  40 days  
+2 2022-04-06 2022-11-14 222 days  ",5546.TW,Ema,

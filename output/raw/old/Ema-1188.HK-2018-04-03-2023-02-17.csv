@@ -1,0 +1,25 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2018-04-03,2023-02-17,1781 days,13.349917081260365,43795.186468,100000.0,-56.204813531999996,-69.23076923076923,-15.846115242846704,15.442482326680402,0.0,0.0,0.0,-56.204813531999996,-56.204813531999996,948 days,948 days,4,0.0,-10.220440881763526,-32.76553106212423,-18.650184022878513,218 days,58 days,0.0,-18.1441975767903,-4.570518582515674,"                   Equity  DrawdownPct DrawdownDuration
+2018-04-03  100000.000000     0.000000              NaT
+2018-04-04  100000.000000     0.000000              NaT
+2018-04-06  100000.000000     0.000000              NaT
+2018-04-09  100000.000000     0.000000              NaT
+2018-04-10  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2023-02-13   43795.186468     0.562048              NaT
+2023-02-14   43795.186468     0.562048              NaT
+2023-02-15   43795.186468     0.562048              NaT
+2023-02-16   43795.186468     0.562048              NaT
+2023-02-17   43795.186468     0.562048         948 days
+
+[1206 rows x 3 columns]","      Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0  2495009       562      562    0.040080     0.0333 -16916.161020  -0.169162   
+1 -4162516       675      675    0.019960     0.0220  -8491.532640  -0.102204   
+2  3101809       677      684    0.024048     0.0210  -9454.313832  -0.126747   
+3 -1631713       797      947    0.039920     0.0530 -21342.806040  -0.327655   
+
+   EntryTime   ExitTime Duration  
+0 2020-07-15 2020-07-15   0 days  
+1 2020-12-28 2020-12-28   0 days  
+2 2020-12-30 2021-01-11  12 days  
+3 2021-06-28 2022-02-01 218 days  ",1188.HK,Ema,
