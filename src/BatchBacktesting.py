@@ -66,7 +66,25 @@ def run_backtests_strategies(instruments, strategies):
 
     return outputs
 
+def check_crypto(instrument):
+    """
+    Check if the instrument is crypto or not
+    """
+    try:
+        data = get_historical_price_full_crypto(instrument)
+        return True
+    except:
+        return False
 
+def check_stock(instrument):
+    """
+    Check if the instrument is crypto or not
+    """
+    try:
+        data = get_historical_price_full_stock(instrument)
+        return True
+    except:
+        return False
 
 
 def process_instrument(instrument, strategy):
@@ -75,8 +93,14 @@ def process_instrument(instrument, strategy):
     Returns a Pandas dataframe of the backtest results.
     """
     try:
-        data = get_historical_price_full_stock(instrument)
+
+        if check_crypto(instrument):
+            data = get_historical_price_full_crypto(instrument)
+        else:
+            data = get_historical_price_full_stock(instrument)
+
         data = clean_data(data)
+        
         bt = Backtest(
             data, strategy=strategy, cash=100000, commission=0.002, exclusive_orders=True
         )
@@ -210,7 +234,7 @@ def run_backtests_optimise(instruments, strategy=EMA, num_threads=4, generate_pl
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
         future_to_instrument = {
             executor.submit(process_instrument_optimise, instrument, strategy): instrument
-            for instrument in instruments
+            for instrument in track(instruments)
         }
         for future in track(concurrent.futures.as_completed(future_to_instrument)):
             instrument = future_to_instrument[future]

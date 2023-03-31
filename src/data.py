@@ -115,6 +115,15 @@ def get_SP500():
     data = pd.read_html(api_endpoint)
     return list(data[0]['Symbol'])
 
+def get_all_crypto():
+    """
+    All possible crypto on binance
+    """
+
+    api_endpoint = "https://api.binance.com/api/v3/ticker/price"
+    data = make_api_request(api_endpoint, {})
+    return [i['symbol'] for i in data]
+
 
 def get_Vanguard_Canada():
     """
