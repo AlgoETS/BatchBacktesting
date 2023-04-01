@@ -223,22 +223,20 @@ class LinearRegression(Strategy):
 #             self.position.close()
 #             self.sell(sl=1.10 * price, tp=0.75 * price)
 
-# class AroonOscillator(Strategy):
-#     n1 = 14
+class AroonOscillator(Strategy):
+    def init(self):
+        close = self.data.Close
+        self.aroon = self.I(taPanda.aroon, high=self.data.High, low=self.data.Low)
 
-#     def init(self):
-#         close = self.data.Close
-#         self.aroon = self.I(taPanda.aroon, close.s, self.n1)
+    def next(self):
+        price = self.data.Close
+        if crossover(price, self.aroon):
+            self.position.close()
+            self.buy(sl=0.90 * price, tp=1.25 * price)
 
-#     def next(self):
-#         price = self.data.Close
-#         if crossover(price, self.aroon):
-#             self.position.close()
-#             self.buy(sl=0.90 * price, tp=1.25 * price)
-
-#         elif crossover(self.aroon, price):
-#             self.position.close()
-#             self.sell(sl=1.10 * price, tp=0.75 * price)
+        elif crossover(self.aroon, price):
+            self.position.close()
+            self.sell(sl=1.10 * price, tp=0.75 * price)
 
 class StandardDeviation(Strategy):
     n1 = 20
@@ -268,6 +266,6 @@ STRATEGIES = [
     # ADI,
     # ADX,
     # StochasticOscillator,
-    # AroonOscillator,
+    AroonOscillator,
     StandardDeviation,
 ]
