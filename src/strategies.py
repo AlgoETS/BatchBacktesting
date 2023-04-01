@@ -3,6 +3,24 @@ from backtesting import Backtest, Strategy
 from backtesting.lib import crossover
 import pandas_ta as taPanda
 
+
+class AbstractStrategy(Strategy):
+    def init(self):
+        pass
+
+    def next(self):
+        pass
+
+    def optimize_parameters(self):
+        pass
+
+    def optimize_func(self):
+        pass
+
+    def optimize_run(self):
+        pass
+
+
 class EMA(Strategy):
     n1 = 20
     n2 = 80
@@ -104,15 +122,15 @@ class MACD(Strategy):
 
     def init(self):
         close = self.data.Close
-        self.macd = self.I(taPanda.macd, close.s, self.n1, self.n2, self.n3)
+        self.macd = self.I(taPanda.macd , close.s, self.n1, self.n2, self.n3)
 
     def next(self):
         price = self.data.Close
-        if crossover(self.macd["MACD_12_26_9"], self.macd["SIGNAL_12_26_9"]):
+        if crossover(self.macd[0], self.macd[1]):
             self.position.close()
             self.buy(sl=0.90 * price, tp=1.25 * price)
 
-        elif crossover(self.macd["SIGNAL_12_26_9"], self.macd["MACD_12_26_9"]):
+        elif crossover(self.macd[1], self.macd[0]):
             self.position.close()
             self.sell(sl=1.10 * price, tp=0.75 * price)
 
@@ -134,10 +152,122 @@ class LinearRegression(Strategy):
             self.position.close()
             self.sell(sl=1.10 * price, tp=0.75 * price)
 
+# class OBV(Strategy):
+#     n1 = 14
+
+#     def init(self):
+#         close = self.data.Close
+#         volume = self.data.Volume
+#         self.obv = self.I(taPanda.obv, close.s, self.n1, volume.s)
+
+#     def next(self):
+#         price = self.data.Close
+#         if self.obv[-1] > self.obv[-2]:
+#             self.buy()
+#         elif self.obv[-1] < self.obv[-2]:
+#             self.sell()
+# class ADI(Strategy):
+#     n1 = 14
+
+#     def init(self):
+#         close = self.data.Close
+#         volume = self.data.Volume
+#         self.adi = self.I(taPanda.adi, close.s, self.n1, volume.s)
+
+#     def next(self):
+#         if self.adi[-1] > self.adi[-2]:
+#             self.buy()
+#         elif self.adi[-1] < self.adi[-2]:
+#             self.sell()
+
+# class ADX(Strategy):
+#     n1 = 14
+
+#     def init(self):
+#         close = self.data.Close
+#         self.adx = self.I(taPanda.adx, close.s, self.n1)
+
+#     def next(self):
+#         price = self.data.Close
+#         if crossover(price, self.adx):
+#             self.position.close()
+#             self.buy(
+#                 price=price,
+#                 stoploss=0.90 * price,
+#                 takeprofit=1.25 * price
+#             )
+#         elif crossover(self.adx, price):
+#             self.position.close()
+#             self.sell(
+#                 price=price,
+#                 stoploss=1.10 * price,
+#                 takeprofit=0.75 * price
+#             )
+
+# class StochasticOscillator(Strategy):
+#     n1 = 14
+#     n2 = 3
+#     n3 = 3
+
+#     def init(self):
+#         close = self.data.Close
+#         self.stoch = self.I(taPanda.stoch, close.s, self.n1, self.n2, self.n3)
+
+#     def next(self):
+#         price = self.data.Close
+#         if crossover(price, self.stoch):
+#             self.position.close()
+#             self.buy(sl=0.90 * price, tp=1.25 * price)
+
+#         elif crossover(self.stoch, price):
+#             self.position.close()
+#             self.sell(sl=1.10 * price, tp=0.75 * price)
+
+# class AroonOscillator(Strategy):
+#     n1 = 14
+
+#     def init(self):
+#         close = self.data.Close
+#         self.aroon = self.I(taPanda.aroon, close.s, self.n1)
+
+#     def next(self):
+#         price = self.data.Close
+#         if crossover(price, self.aroon):
+#             self.position.close()
+#             self.buy(sl=0.90 * price, tp=1.25 * price)
+
+#         elif crossover(self.aroon, price):
+#             self.position.close()
+#             self.sell(sl=1.10 * price, tp=0.75 * price)
+
+class StandardDeviation(Strategy):
+    n1 = 20
+
+    def init(self):
+        close = self.data.Close
+        self.std = self.I(taPanda.stddev, close.s, self.n1)
+
+    def next(self):
+        price = self.data.Close
+        if crossover(price, self.std):
+            self.position.close()
+            self.buy(sl=0.90 * price, tp=1.25 * price)
+
+        elif crossover(self.std, price):
+            self.position.close()
+            self.sell(sl=1.10 * price, tp=0.75 * price)
+
+
 STRATEGIES = [
     EMA,
     RSI,
     BollingerBands,
     MACD,
-    LinearRegression
+    LinearRegression,
+    # OBV,
+    # ADI,
+    # ADX,
+    # StochasticOscillator,
+    # AroonOscillator,
+    StandardDeviation,
 ]

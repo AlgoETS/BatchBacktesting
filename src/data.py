@@ -117,12 +117,14 @@ def get_SP500():
 
 def get_all_crypto():
     """
-    All possible crypto on binance
+    All possible crypto symbols
     """
 
-    api_endpoint = "https://api.binance.com/api/v3/ticker/price"
-    data = make_api_request(api_endpoint, {})
-    return [i['symbol'] for i in data]
+    api_endpoint = f"{BASE_URL_FMP}/symbol/available-cryptocurrencies"
+    params = {"apikey": FMP_API_KEY}
+
+    return [x['symbol'] for x in make_api_request(api_endpoint, params)]
+
 
 
 def get_Vanguard_Canada():

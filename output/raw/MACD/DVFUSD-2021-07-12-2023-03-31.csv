@@ -1,0 +1,26 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2021-07-12,2023-03-31,627 days,14.583333333333334,175811.11667704175,175811.11667704175,75.81111667704175,-69.79082900888042,39.10296795001551,42.62806552446438,0.9173057108954239,4.159442925372634,3.823261478422284,-10.227646780296029,-2.9172726220361103,45 days,8 days,4,75.0,25.787575276049445,-10.22802907979241,15.149349999779327,50 days,22 days,7.366141605274702,16.2782703662065,1.8705289771139715,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2021-07-12  100000.000000     0.000000              NaT
+2021-07-13  100000.000000     0.000000              NaT
+2021-07-14  100000.000000     0.000000              NaT
+2021-07-15  100000.000000     0.000000              NaT
+2021-07-16  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2023-03-27  140459.296717     0.000840              NaT
+2023-03-28  141225.068237     0.000000          45 days
+2023-03-29  141118.216397     0.000757              NaT
+2023-03-30  140426.350733     0.005656              NaT
+2023-03-31  175811.116677     0.000000           3 days
+
+[624 rows x 3 columns]","     Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0  -25720       125      128    3.887880   4.285533 -10227.646780  -0.102280   
+1   19301       130      130    4.651166   5.802984  22231.238469   0.247641   
+2  -14450       162      196    7.751017   5.829581  27764.744417   0.247895   
+3  222608       573      623    0.627866   0.789778  36042.780571   0.257876   
+
+   EntryTime   ExitTime Duration  
+0 2021-11-14 2021-11-17   3 days  
+1 2021-11-19 2021-11-19   0 days  
+2 2021-12-21 2022-01-24  34 days  
+3 2023-02-09 2023-03-31  50 days  ",DVFUSD,MACD,

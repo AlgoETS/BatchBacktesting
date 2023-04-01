@@ -28,6 +28,7 @@ from data import (
     get_financial_statements_lists,
 )
 
+
 # import strategy
 from strategies import *
 

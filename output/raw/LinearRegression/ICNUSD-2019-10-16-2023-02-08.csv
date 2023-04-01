@@ -1,0 +1,26 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2019-10-16,2023-02-08,1211 days,42.465753424657535,155128.00524777692,155750.61352552,55.128005247776926,-98.43518763588764,798.3613109391994,512.6332425427939,1.5573732732959729,117.44722604078173,295.891230946177,-2.698158064320677,-1.167737552300732,318 days,82 days,4,50.0,24.849699398797597,-0.20054641642595072,11.6021493080265,301 days,81 days,123.95487601224798,12.30001279649111,1.6733507864843695,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2019-10-16  100000.000000     0.000000              NaT
+2022-02-03  100000.000000     0.000000              NaT
+2022-02-04  100000.000000     0.000000              NaT
+2022-02-06  100000.000000     0.000000              NaT
+2022-02-07  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2022-04-14  155128.231591     0.003996              NaT
+2022-04-15  155128.231591     0.003996              NaT
+2022-04-16  155128.231591     0.003996              NaT
+2022-04-17  155128.231591     0.003996              NaT
+2023-02-08  155128.005248     0.003997         318 days
+
+[73 rows x 3 columns]","       Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  \
+0   3885400        25       27    0.025737   0.032107  24750.495331   
+1  -5714830        36       43    0.021829   0.016405  31000.118194   
+2  55095269        53       67    0.002827   0.002821   -310.879463   
+3 -55205681        67       72    0.002816   0.002821   -311.728815   
+
+   ReturnPct  EntryTime   ExitTime Duration  
+0   0.247505 2022-02-28 2022-03-02   2 days  
+1   0.248497 2022-03-11 2022-03-18   7 days  
+2  -0.001996 2022-03-30 2022-04-13  14 days  
+3  -0.002005 2022-04-13 2023-02-08 301 days  ",ICNUSD,LinearRegression,

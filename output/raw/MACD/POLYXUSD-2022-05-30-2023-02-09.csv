@@ -1,0 +1,28 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
+0,2022-05-30,2023-02-09,255 days,26.984126984126984,86224.91399488646,100293.53131202,-13.775086005113538,-16.134843485240342,-19.319294627476612,32.67833239995566,0.0,0.0,0.0,-27.198860276970283,-16.74832515647514,162 days,86 days,5,20.0,18.092354888913007,-10.2197758776555,-2.920718330532912,23 days,13 days,0.6030685973282752,-2.381627508215862,-0.6456139884985582,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2022-05-30  100000.000000     0.000000              NaT
+2022-05-31  100000.000000     0.000000              NaT
+2022-06-01  100000.000000     0.000000              NaT
+2022-06-02  100000.000000     0.000000              NaT
+2022-06-03  100000.000000     0.000000              NaT
+...                   ...          ...              ...
+2023-02-05   92897.743278     0.073741              NaT
+2023-02-06   92682.621395     0.075886              NaT
+2023-02-07   95945.645466     0.043352              NaT
+2023-02-08   91720.156737     0.085483              NaT
+2023-02-09   86224.913995     0.140274         162 days
+
+[252 rows x 3 columns]","     Size  EntryBar  ExitBar  EntryPrice  ExitPrice           PnL  ReturnPct  \
+0  785242        85       98    0.127349   0.114386 -10179.633863  -0.101796   
+1 -543008       153      155    0.165413   0.182317  -9179.435122  -0.102198   
+2  489378       188      192    0.164782   0.161711  -1502.993667  -0.018638   
+3 -547664       202      225    0.144501   0.155681  -6123.103484  -0.077373   
+4  460331       230      251    0.158613   0.187310  13210.080131   0.180924   
+
+   EntryTime   ExitTime Duration  
+0 2022-08-23 2022-09-05  13 days  
+1 2022-10-30 2022-11-01   2 days  
+2 2022-12-07 2022-12-11   4 days  
+3 2022-12-21 2023-01-13  23 days  
+4 2023-01-18 2023-02-09  22 days  ",POLYXUSD,MACD,
