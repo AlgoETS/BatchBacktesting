@@ -269,3 +269,17 @@ STRATEGIES = [
     AroonOscillator,
     StandardDeviation,
 ]
+
+STRATEGIES_STR = [
+    "EMA",
+    "RSI",
+    "BollingerBands",
+    "MACD",
+    "LinearRegression",
+    # OBV,
+    # ADI,
+    # ADX,
+    # StochasticOscillator,
+    # "AroonOscillator",
+    "StandardDeviation",
+]

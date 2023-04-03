@@ -167,13 +167,11 @@ def process_output(output, instrument, strategy, in_row=True):
     return output
 
 
-def save_output(output, output_dir, instrument):
+def save_output(output, output_dir, instrument, start, end):
     """
     Save backtest output to file and generate chart if specified.
     """
     print(f"Saving output for {instrument}")
-    start = output["Start"].to_string().replace(" ", "")
-    end = output["End"].to_string().replace(" ", "")
     fileNameOutput = f"{output_dir}/{instrument}-{start}-{end}.csv"
     output.to_csv(fileNameOutput)
 
@@ -183,7 +181,7 @@ def plot_results(bt, output_dir, instrument, start, end):
     fileNameChart = f"{output_dir}/{instrument}-{start}-{end}.html"
     bt.plot(filename=fileNameChart, open_browser=False)
 
-def run_backtests(instruments, strategy=EMA, num_threads=4, generate_plots=False):
+def run_backtests(instruments, strategy, num_threads=4, generate_plots=False):
     """
     Run backtests for a list of instruments using a specified strategy.
     Returns a list of Pandas dataframes of the backtest results.
@@ -196,8 +194,11 @@ def run_backtests(instruments, strategy=EMA, num_threads=4, generate_plots=False
     """
     outputs = []
     output_dir = f"output/raw/{strategy.__name__}"
+    output_dir_charts = f"output/charts/{strategy.__name__}"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
+    if not os.path.exists(output_dir_charts):
+        os.makedirs(output_dir_charts)
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
         future_to_instrument = {
             executor.submit(process_instrument, instrument, strategy): instrument
@@ -207,29 +208,32 @@ def run_backtests(instruments, strategy=EMA, num_threads=4, generate_plots=False
             instrument = future_to_instrument[future]
             output = future.result()
             if output is not None:
-                print(f"Finished processing {instrument}")
-                outputs.append(output)
-                save_output(output, output_dir, instrument)
+                outputs.append(output[0])
+                save_output(output[0], output_dir, instrument, output[0]["Start"].to_string().strip().split()[1], output[0]["End"].to_string().strip().split()[1])
+                if generate_plots:
+                    plot_results(output[1], output_dir_charts, instrument, output[0]["Start"].to_string().strip().split()[1], output[0]["End"].to_string().strip().split()[1])
     data_frame = pd.concat(outputs)
     start = data_frame["Start"].to_string().strip().split()[1]
     end = data_frame["End"].to_string().strip().split()[1]
     fileNameOutput = f"output/{strategy.__name__}-{start}-{end}.csv"
     data_frame.to_csv(fileNameOutput)
-    if generate_plots:
-        plot_results(output[1], output_dir, instrument, start, end)
+
 
     return data_frame
 
 
-def run_backtests_optimise(instruments, strategy=EMA, num_threads=4, generate_plots=False):
+def run_backtests_optimise(instruments, strategy, num_threads=4, generate_plots=False):
     """
     Run backtests for a list of instruments using a specified strategy.
     Returns a list of Pandas dataframes of the backtest results.
     """
     outputs = []
     output_dir = f"output/raw/{strategy.__name__}"
+    output_dir_charts = f"output/charts/{strategy.__name__}"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
+    if not os.path.exists(output_dir_charts):
+        os.makedirs(output_dir_charts)
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_threads) as executor:
         future_to_instrument = {
             executor.submit(process_instrument_optimise, instrument, strategy): instrument
@@ -239,13 +243,12 @@ def run_backtests_optimise(instruments, strategy=EMA, num_threads=4, generate_pl
             instrument = future_to_instrument[future]
             output = future.result()
             if output is not None:
-                outputs.append(output)
-                save_output(output, output_dir, instrument)
+                outputs.append(output[0])
+                save_output(output[0], output_dir, instrument, output[0]["Start"].to_string().strip().split()[1], output[0]["End"].to_string().strip().split()[1])
+                if generate_plots:
+                    plot_results(output[1], output_dir_charts, instrument, output[0]["Start"].to_string().strip().split()[1], output[0]["End"].to_string().strip().split()[1])
     data_frame = pd.concat(outputs)
     start = data_frame["Start"].to_string().strip().split()[1]
     end = data_frame["End"].to_string().strip().split()[1]
     fileNameOutput = f"output/{strategy.__name__}-{start}-{end}.csv"
-    if generate_plots:
-        plot_results(output[1], output_dir, instrument, start, end)
-
     return data_frame
