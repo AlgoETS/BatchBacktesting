@@ -12,6 +12,8 @@ import glob
 from rich.progress import track
 import warnings
 
+from src.data import get_all_crypto
+
 warnings.filterwarnings("ignore")
 
 
@@ -71,21 +73,13 @@ def check_crypto(instrument):
     """
     Check if the instrument is crypto or not
     """
-    try:
-        data = get_historical_price_full_crypto(instrument)
-        return True
-    except:
-        return False
+    return instrument in get_all_crypto()
 
 def check_stock(instrument):
     """
     Check if the instrument is crypto or not
     """
-    try:
-        data = get_historical_price_full_stock(instrument)
-        return True
-    except:
-        return False
+    return instrument not in get_financial_statements_lists()
 
 
 def process_instrument(instrument, strategy):
@@ -101,7 +95,7 @@ def process_instrument(instrument, strategy):
             data = get_historical_price_full_stock(instrument)
 
         data = clean_data(data)
-        
+
         bt = Backtest(
             data, strategy=strategy, cash=100000, commission=0.002, exclusive_orders=True
         )
@@ -177,13 +171,15 @@ def save_output(output, output_dir, instrument):
     """
     Save backtest output to file and generate chart if specified.
     """
-    start = output["Start"].to_string().strip().split()[1]
-    end = output["End"].to_string().strip().split()[1]
+    print(f"Saving output for {instrument}")
+    start = output["Start"].to_string().replace(" ", "")
+    end = output["End"].to_string().replace(" ", "")
     fileNameOutput = f"{output_dir}/{instrument}-{start}-{end}.csv"
     output.to_csv(fileNameOutput)
 
 
 def plot_results(bt, output_dir, instrument, start, end):
+    print(f"Saving chart for {instrument}")
     fileNameChart = f"{output_dir}/{instrument}-{start}-{end}.html"
     bt.plot(filename=fileNameChart, open_browser=False)
 
@@ -211,12 +207,14 @@ def run_backtests(instruments, strategy=EMA, num_threads=4, generate_plots=False
             instrument = future_to_instrument[future]
             output = future.result()
             if output is not None:
+                print(f"Finished processing {instrument}")
                 outputs.append(output)
-                save_output(output, output_dir, instrument, output[1], generate_plots)
+                save_output(output, output_dir, instrument)
     data_frame = pd.concat(outputs)
     start = data_frame["Start"].to_string().strip().split()[1]
     end = data_frame["End"].to_string().strip().split()[1]
     fileNameOutput = f"output/{strategy.__name__}-{start}-{end}.csv"
+    data_frame.to_csv(fileNameOutput)
     if generate_plots:
         plot_results(output[1], output_dir, instrument, start, end)
 
@@ -242,7 +240,7 @@ def run_backtests_optimise(instruments, strategy=EMA, num_threads=4, generate_pl
             output = future.result()
             if output is not None:
                 outputs.append(output)
-                save_output(output, output_dir, instrument, output[1], generate_plots)
+                save_output(output, output_dir, instrument)
     data_frame = pd.concat(outputs)
     start = data_frame["Start"].to_string().strip().split()[1]
     end = data_frame["End"].to_string().strip().split()[1]
