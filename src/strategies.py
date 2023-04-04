@@ -243,7 +243,7 @@ class StandardDeviation(Strategy):
 
     def init(self):
         close = self.data.Close
-        self.std = self.I(taPanda.stddev, close.s, self.n1)
+        self.std = self.I(taPanda.stdev, close.s, self.n1)
 
     def next(self):
         price = self.data.Close
