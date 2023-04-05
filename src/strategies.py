@@ -319,40 +319,6 @@ class MAD(Strategy):
             self.buy()
         elif self.mad[-1] < self.mad[-2]:
             self.sell()
-
-# class FourierTransform(Strategy):
-#     def FFT(self, x):
-#         """
-#         A recursive implementation of
-#         the 1D Cooley-Tukey FFT, the
-#         input should have a length of
-#         power of 2.
-#         """
-#         N = len(x)
-#         if N == 1:
-#             return x
-#         X_even = self.FFT(x[::2])
-#         X_odd = self.FFT(x[1::2])
-#         factor = \
-#             np.exp(-2j*np.pi*np.arange(N)/ N)
-#         return np.concatenate(
-#             [
-#                 X_even + factor[: int(N / 2)] * X_odd,
-#                 X_even + factor[int(N / 2) :] * X_odd,
-#             ]
-#         )
-
-#     def init(self):
-#         close = self.data.Close
-#         self.ft = self.I(self.FFT, close.s)
-
-#     def next(self):
-#         price = self.data.Close
-#         if self.ft[-1] > self.ft[-2]:
-#             self.buy()
-#         elif self.ft[-1] < self.ft[-2]:
-#             self.sell()
-
 class CDLZ(Strategy):
     def init(self):
         close = self.data.Close
@@ -377,6 +343,18 @@ class MOM(Strategy):
         elif self.mom[-1] < self.mom[-2]:
             self.sell()
 
+class FWMA(Strategy):
+    def init(self):
+        close = self.data.Close
+        self.fwma = self.I(taPanda.fwma, close.s)
+
+    def next(self):
+        price = self.data.Close
+        if self.fwma[-1] > self.fwma[-2]:
+            self.buy()
+        elif self.fwma[-1] < self.fwma[-2]:
+            self.sell()
+
 STRATEGIES = [
     EMA,
     RSI,
@@ -394,9 +372,9 @@ STRATEGIES = [
     AroonOscillator,
     SimpleMeanReversion,
     MAD,
-    # FourierTransform,
     CDLZ,
     MOM,
+    FWMA,
 ]
 
 STRATEGIES_STR = [
@@ -416,7 +394,7 @@ STRATEGIES_STR = [
     "AroonOscillator",
     "SimpleMeanReversion",
     "MAD",
-    # "FourierTransform",
     "CDLZ",
     "MOM",
+    "FWMA",
 ]
