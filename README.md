@@ -93,8 +93,7 @@ BatchBacktesting supports the following trading strategies:
 
 BatchBacktesting also supports backtesting for the following cryptocurrencies:
 
-Bitcoin (BTCUSD)
-
+- Bitcoin (BTCUSD)
 - Ethereum (ETHUSD)
 - Litecoin (LTCUSD)
 - Bitcoin Cash (BCHUSD)
