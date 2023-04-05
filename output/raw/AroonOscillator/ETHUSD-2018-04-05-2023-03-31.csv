@@ -1,0 +1,22 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy
+0,2018-04-05,2023-03-31,1821 days,0.43907793633369924,112264.3441179488,112264.3441179488,12.2643441179488,371.041405059138,2.344595473194011,8.162875219074268,0.2872266707832765,0.7234149779807747,0.2337112428765698,-10.032018333120007,-10.032018333120007,11 days,11 days,2,50.0,24.784323466744706,-10.037914165081109,5.95214966468387,3 days,3 days,2.4690710698605027,7.373204650831799,0.3793677202647606,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2018-04-05  100000.000000          0.0              NaT
+2018-04-06  100000.000000          0.0              NaT
+2018-04-07  100000.000000          0.0              NaT
+2018-04-08  100000.000000          0.0              NaT
+2018-04-09  100000.000000          0.0              NaT
+...                   ...          ...              ...
+2023-03-27  112264.344118          0.0              NaT
+2023-03-28  112264.344118          0.0              NaT
+2023-03-29  112264.344118          0.0              NaT
+2023-03-30  112264.344118          0.0              NaT
+2023-03-31  112264.344118          0.0              NaT
+
+[1822 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice   ExitPrice           PnL  ReturnPct  \
+0  1050       249      252   95.182157   85.627853 -10032.018333  -0.100379   
+1   944       257      260   95.298256  118.917284  22296.362451   0.247843   
+
+   EntryTime   ExitTime Duration  
+0 2018-12-10 2018-12-13   3 days  
+1 2018-12-18 2018-12-21   3 days  ",ETHUSD,AroonOscillator

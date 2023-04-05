@@ -3,6 +3,7 @@ from backtesting import Backtest, Strategy
 from backtesting.lib import crossover
 import numpy as np
 import pandas_ta as taPanda
+import talib
 
 
 class AbstractStrategy(Strategy):
@@ -355,6 +356,77 @@ class FWMA(Strategy):
         elif self.fwma[-1] < self.fwma[-2]:
             self.sell()
 
+class DEMA(Strategy):
+    def init(self):
+        close = self.data.Close
+        self.dema = self.I(taPanda.dema, close.s)
+
+    def next(self):
+        price = self.data.Close
+        if crossover(price, self.dema):
+            self.position.close()
+            self.buy(sl=0.90 * price, tp=1.25 * price)
+        elif crossover(self.dema, price):
+            self.position.close()
+            self.sell(sl=1.10 * price, tp=0.75 * price)
+
+class ALMA(Strategy):
+    def init(self):
+        close = self.data.Close
+        self.alma = self.I(taPanda.alma, close.s)
+
+    def next(self):
+        price = self.data.Close
+        if crossover(price, self.alma):
+            self.position.close()
+            self.buy(sl=0.90 * price, tp=1.25 * price)
+        elif crossover(self.alma, price):
+            self.position.close()
+            self.sell(sl=1.10 * price, tp=0.75 * price)
+
+class RVGI(Strategy):
+    def init(self):
+        close = self.data.Close
+        self.rvgi = self.I(taPanda.rvgi, self.data.Open.s, self.data.High.s, self.data.Low.s, close.s)
+
+    def next(self):
+        price = self.data.Close
+        if self.rvgi[-1] > self.rvgi[-2]:
+            self.buy()
+        elif self.rvgi[-1] < self.rvgi[-2]:
+            self.sell()
+
+class Ichimoku(Strategy):
+    def init(self):
+        high = self.data.High
+        low = self.data.Low
+        close = self.data.Close
+        self.ichimoku = talib.ichimoku(high, low, close)
+
+    def next(self):
+        price = self.data.Close
+        if price > self.ichimoku['senkou_span_a'][-1] and price > self.ichimoku['senkou_span_b'][-1]:
+            # Price is above the Kumo, indicating a bullish trend
+            if crossover(self.ichimoku['tenkan_sen'], self.ichimoku['kijun_sen']):
+                # Tenkan-sen crosses above Kijun-sen, indicating a bullish signal
+                self.position.close()
+                self.buy(sl=0.90 * price, tp=1.25 * price)
+            elif price > self.ichimoku['senkou_span_a'][-2] and price > self.ichimoku['senkou_span_b'][-2]:
+                # Price is still above the Kumo, but Tenkan-sen hasn't crossed Kijun-sen yet
+                self.position.close()
+                self.buy(sl=0.90 * price, tp=1.25 * price)
+        elif price < self.ichimoku['senkou_span_a'][-1] and price < self.ichimoku['senkou_span_b'][-1]:
+            # Price is below the Kumo, indicating a bearish trend
+            if crossover(self.ichimoku['kijun_sen'], self.ichimoku['tenkan_sen']):
+                # Kijun-sen crosses above Tenkan-sen, indicating a bearish signal
+                self.position.close()
+                self.sell(sl=1.10 * price, tp=0.75 * price)
+            elif price < self.ichimoku['senkou_span_a'][-2] and price < self.ichimoku['senkou_span_b'][-2]:
+                # Price is still below the Kumo, but Kijun-sen hasn't crossed Tenkan-sen yet
+                self.position.close()
+                self.sell(sl=1.10 * price, tp=0.75 * price)
+
+
 STRATEGIES = [
     EMA,
     RSI,
@@ -375,6 +447,10 @@ STRATEGIES = [
     CDLZ,
     MOM,
     FWMA,
+    DEMA,
+    ALMA,
+    RVGI,
+    Ichimoku,
 ]
 
 STRATEGIES_STR = [
@@ -397,4 +473,8 @@ STRATEGIES_STR = [
     "CDLZ",
     "MOM",
     "FWMA",
+    "DEMA",
+    "ALMA",
+    "RVGI",
+    "Ichimoku",
 ]

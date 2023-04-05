@@ -155,12 +155,68 @@ def get_all_crypto():
     """
     All possible crypto symbols
     """
-
-    api_endpoint = f"{BASE_URL_FMP}/symbol/available-cryptocurrencies"
-    params = {"apikey": FMP_API_KEY}
-
-    return [x['symbol'] for x in make_api_request(api_endpoint, params)]
-
+    return [
+        "BTCUSD",
+        "ETHUSD",
+        "LTCUSD",
+        "BCHUSD",
+        "XRPUSD",
+        "EOSUSD",
+        "XLMUSD",
+        "TRXUSD",
+        "ETCUSD",
+        "DASHUSD",
+        "ZECUSD",
+        "XTZUSD",
+        "XMRUSD",
+        "ADAUSD",
+        "NEOUSD",
+        "XEMUSD",
+        "VETUSD",
+        "DOGEUSD",
+        "OMGUSD",
+        "ZRXUSD",
+        "BATUSD"
+        "USDTUSD",
+        "LINKUSD",
+        "BTTUSD",
+        "BNBUSD",
+        "ONTUSD",
+        "QTUMUSD",
+        "ALGOUSD",
+        "ZILUSD",
+        "ICXUSD",
+        "KNCUSD",
+        "ZENUSD",
+        "THETAUSD",
+        "IOSTUSD",
+        "ATOMUSD",
+        "MKRUSD",
+        "COMPUSD",
+        "YFIUSD",
+        "SUSHIUSD",
+        "SNXUSD",
+        "UMAUSD",
+        "BALUSD",
+        "AAVEUSD",
+        "UNIUSD",
+        "RENBTCUSD",
+        "RENUSD",
+        "CRVUSD",
+        "SXPUSD",
+        "KSMUSD",
+        "OXTUSD",
+        "DGBUSD",
+        "LRCUSD",
+        "WAVESUSD",
+        "NMRUSD",
+        "STORJUSD",
+        "KAVAUSD",
+        "RLCUSD",
+        "BANDUSD",
+        "SCUSD",
+        "ENJUSD",
+    ]
 
 
 def get_Vanguard_Canada():

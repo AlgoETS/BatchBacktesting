@@ -1,5 +1,5 @@
-,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy,StrategyParameters
-0,2019-01-31,2023-03-30,1519 days,17.17105263157895,74.42637497132168,205496.796629924,-99.92557362502868,30.991735537190085,-82.2661580685749,15.09973491194721,0.0,0.0,0.0,-99.96378222133295,-15.641638315292225,876 days,117 days,25,20.0,99.90116804169796,-99.89767686848525,-25.03320444344965,77 days,10 days,0.7124908815048607,-3.2009647170401445,-0.8854323912675999,"                   Equity  DrawdownPct DrawdownDuration
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy
+0,2019-01-31,2023-03-30,1519 days,17.17105263157895,74.42637497132168,205496.796629924,-99.92557362502868,30.991735537190085,-82.2661580685749,15.09973491194721,0.0,0.0,0.0,-99.96378222133295,-15.641638315292225,876 days,117 days,25,20.0,99.90116804169796,-99.89767686848525,-25.03320444344965,77 days,10 days,0.7124908815048607,-3.2009647170401454,-0.8854323912675999,"                   Equity  DrawdownPct DrawdownDuration
 Date                                                   
 2019-01-31  100000.000000     0.000000              NaT
 2019-02-01  100000.000000     0.000000              NaT
@@ -65,4 +65,4 @@ Date
 21  -0.998977 2023-01-20 2023-02-08  19 days  
 22  -0.002004 2023-02-09 2023-02-09   0 days  
 23  -0.100569 2023-02-20 2023-02-28   8 days  
-24  -0.002004 2023-03-09 2023-03-09   0 days  ",BTTBUSD,EMA,
+24  -0.002004 2023-03-09 2023-03-09   0 days  ",BTTBUSD,EMA

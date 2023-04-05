@@ -163,7 +163,6 @@ def process_output(output, instrument, strategy, in_row=True):
     output["Instrument"] = instrument
     output["Strategy"] = strategy.__name__
     output.pop("_strategy")
-    output["StrategyParameters"] = strategy.__dict__
     return output
 
 

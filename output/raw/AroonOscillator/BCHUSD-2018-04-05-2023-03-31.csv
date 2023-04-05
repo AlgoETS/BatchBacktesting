@@ -1,0 +1,28 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy
+0,2018-04-05,2023-03-31,1821 days,3.8968166849615806,182852.811294,182852.811294,82.85281129400002,-81.07725481068195,12.851319312058296,15.010857052301189,0.8561349473438739,2.566883851401949,0.7675241164036706,-16.74386385704041,-5.5284268282291436,49 days,15 days,5,60.0,24.799104655193727,-4.7777906466872295,12.830631430159723,40 days,14 days,12.955512232629209,13.670659805767988,1.8824099436573716,"                   Equity  DrawdownPct DrawdownDuration
+Date                                                   
+2018-04-05  100000.000000          0.0              NaT
+2018-04-06  100000.000000          0.0              NaT
+2018-04-07  100000.000000          0.0              NaT
+2018-04-08  100000.000000          0.0              NaT
+2018-04-09  100000.000000          0.0              NaT
+...                   ...          ...              ...
+2023-03-27  182852.811294          0.0              NaT
+2023-03-28  182852.811294          0.0              NaT
+2023-03-29  182852.811294          0.0              NaT
+2023-03-30  182852.811294          0.0              NaT
+2023-03-31  182852.811294          0.0              NaT
+
+[1822 rows x 3 columns]","   Size  EntryBar  ExitBar  EntryPrice   ExitPrice           PnL  ReturnPct  \
+0  1105       257      258   90.490503  112.931337  24797.122132   0.247991   
+1  1213      1561     1566  102.878735  128.109436  30604.840888   0.245247   
+2  1514      1681     1721  102.604139  101.640159  -1459.465236  -0.009395   
+3  1511      1721     1732  101.843439   96.977573  -7352.324006  -0.047778   
+4  1508      1732     1743   97.171528  121.218370  36262.637516   0.247468   
+
+   EntryTime   ExitTime Duration  
+0 2018-12-18 2018-12-19   1 days  
+1 2022-07-14 2022-07-19   5 days  
+2 2022-11-11 2022-12-21  40 days  
+3 2022-12-21 2023-01-01  11 days  
+4 2023-01-01 2023-01-12  11 days  ",BCHUSD,AroonOscillator

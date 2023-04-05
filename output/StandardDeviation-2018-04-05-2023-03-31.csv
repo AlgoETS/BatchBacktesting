@@ -1,0 +1,337 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,8.98324126010235,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",XRPUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,313.79881495712596,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",BTCUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-24.41487648529008,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",LTCUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-43.4500353642518,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",XLMUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,371.041405059138,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",ETHUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,62.62308192132754,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",TRXUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-81.20870457128323,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",DASHUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,49.52027266025875,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",ETCUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-58.75294797131444,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",XTZUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-81.40466341317104,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",EOSUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,154.41186356364028,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",ADAUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-79.29861249343946,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",ZECUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-81.07725481068195,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",BCHUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-9.929898120695302,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",XMRUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-73.84630567640076,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",NEOUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-82.55267653758543,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",XEMUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-82.15322329381533,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",OMGUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,35.09006075804949,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",BATUSD,StandardDeviation
+0,2018-08-03,2023-03-31,1701 days,0.0,100000.0,100000.0,0.0,50.872149996733526,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-08-03  100000.0          0.0               NaN
+2018-08-04  100000.0          0.0               NaN
+2018-08-05  100000.0          0.0               NaN
+2018-08-06  100000.0          0.0               NaN
+2018-08-07  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1702 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",VETUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,2657.1481208548275,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",DOGEUSD,StandardDeviation
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-56.95510694667873,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",ZRXUSD,StandardDeviation

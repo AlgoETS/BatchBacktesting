@@ -1,0 +1,18 @@
+,Start,End,Duration,Exposure Time [%],Equity Final [$],Equity Peak [$],Return [%],Buy & Hold Return [%],Return (Ann.) [%],Volatility (Ann.) [%],Sharpe Ratio,Sortino Ratio,Calmar Ratio,Max. Drawdown [%],Avg. Drawdown [%],Max. Drawdown Duration,Avg. Drawdown Duration,# Trades,Win Rate [%],Best Trade [%],Worst Trade [%],Avg. Trade [%],Max. Trade Duration,Avg. Trade Duration,Profit Factor,Expectancy [%],SQN,_equity_curve,_trades,Instrument,Strategy
+0,2018-04-05,2023-03-31,1821 days,0.0,100000.0,100000.0,0.0,-58.75294797131444,0.0,0.0,,,,-0.0,,,,0,,,,,,,,,,"              Equity  DrawdownPct  DrawdownDuration
+Date                                               
+2018-04-05  100000.0          0.0               NaN
+2018-04-06  100000.0          0.0               NaN
+2018-04-07  100000.0          0.0               NaN
+2018-04-08  100000.0          0.0               NaN
+2018-04-09  100000.0          0.0               NaN
+...              ...          ...               ...
+2023-03-27  100000.0          0.0               NaN
+2023-03-28  100000.0          0.0               NaN
+2023-03-29  100000.0          0.0               NaN
+2023-03-30  100000.0          0.0               NaN
+2023-03-31  100000.0          0.0               NaN
+
+[1822 rows x 3 columns]","Empty DataFrame
+Columns: [Size, EntryBar, ExitBar, EntryPrice, ExitPrice, PnL, ReturnPct, EntryTime, ExitTime, Duration]
+Index: []",XTZUSD,StandardDeviation
