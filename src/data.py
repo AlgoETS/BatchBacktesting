@@ -1,10 +1,10 @@
 import httpx
-from config import BASE_URL_FMP, FMP_API_KEY
+from config import BASE_URL_BINANCE, BASE_URL_FMP, FMP_API_KEY
 import os
 import pandas as pd
 import numpy as np
 import glob
-
+import datetime as dt
 
 
 
@@ -43,6 +43,42 @@ def get_historical_price_full_crypto(symbol):
     api_endpoint = f"{BASE_URL_FMP}/historical-price-full/crypto/{symbol}"
     params = {"apikey": FMP_API_KEY}
     return make_api_request(api_endpoint, params)
+
+def get_historical_ohlc_data(symbol,past_days=None,interval=None):
+    """
+    This function returns historical klines for a given symbol and interval, for a specified number of past days.
+
+    Parameters:
+
+    symbol: the trading symbol for which the klines are requested
+    interval: the time interval for which the klines are requested (default: '1h')
+    past_days: the number of days for which historical data is requested (default: 30)
+    Returns:
+
+    A pandas DataFrame containing the requested klines data, with columns for the symbol, open date and time, opening price, highest price, lowest price, closing price, trading volume, number of trades, taker base volume, and taker quote volume.
+    """
+
+    if not interval:
+        interval='1h' # default interval 1 hour
+    if not past_days:
+        past_days=30  # default past days 30.
+
+    # Calculate start date based on past_days parameter
+    start_str = str((pd.to_datetime('today') - pd.Timedelta(f'{str(past_days)} days')).date())
+
+    # Request klines data from Binance API
+    api_endpoint = f"{BASE_URL_BINANCE}/api/v3/klines"
+    params = {"symbol": symbol, "interval": interval, "startTime": start_str}
+    klines = make_api_request(api_endpoint, params)
+
+    # Convert klines data to pandas DataFrame and format columns
+    df = pd.DataFrame(klines)
+    df.columns = ['open_time','open', 'high', 'low', 'close', 'volume', 'close_time', 'qav', 'num_trades', 'taker_base_vol', 'taker_quote_vol','is_best_match']
+    df['open_date_time'] = [dt.datetime.fromtimestamp(x/1000) for x in df.open_time]
+    df['symbol'] = symbol
+    df = df[['symbol', 'open_date_time', 'open', 'high', 'low', 'close', 'volume', 'num_trades', 'taker_base_vol', 'taker_quote_vol']]
+
+    return df
 
 
 def get_historical_price_full_stock(symbol):
