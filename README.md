@@ -160,3 +160,14 @@ run_backtests_strategies(["BMO"], STRATEGIES_STR)
     └── utils.py # utils
 
 ```
+
+# TODO
+    [] Add more strategies
+    [] Add more stocks
+    [] Add more cryptocurrencies
+
+    [] Add Github Action Every Push to run the backtesting
+    [] Add Github Action Every Week to run the backtesting
+
+    [] ADD MORE DOCUMENTATION
+    [] Add Visualizations

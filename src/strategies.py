@@ -1,4 +1,3 @@
-
 from backtesting import Backtest, Strategy
 from backtesting.lib import crossover
 import numpy as np
@@ -248,20 +247,17 @@ class OBV(Strategy):
         elif self.obv[-1] < self.obv[-2]:
             self.sell()
 
-class StochasticOscillator(Strategy):
-    def init(self):
-        close = self.data.Close
-        self.stoch = self.I(taPanda.stoch, self.data.High.s, self.data.Low.s, close.s)
+# class StochasticOscillator(Strategy):
+#     def init(self):
+#         close = self.data.Close
+#         self.stoch = self.I(taPanda.stoch, self.data.High.s, self.data.Low.s, close.s)
 
-    def next(self):
-        price = self.data.Close
-        if crossover(self.stoch[0], self.stoch[1]):
-            self.position.close()
-            self.buy(sl=0.90 * price, tp=1.25 * price)
-
-        elif crossover(self.stoch[1], self.stoch[0]):
-            self.position.close()
-            self.sell(sl=1.10 * price, tp=0.75 * price)
+#     def next(self):
+#         price = self.data.Close
+#         if self.stoch[-1] > self.stoch[-2]:
+#             self.buy()
+#         elif self.stoch[-1] < self.stoch[-2]:
+#             self.sell()
 
 class PercentageReturn(Strategy):
     def init(self):
@@ -396,35 +392,50 @@ class RVGI(Strategy):
         elif self.rvgi[-1] < self.rvgi[-2]:
             self.sell()
 
-class Ichimoku(Strategy):
+class SMA(Strategy):
     def init(self):
-        high = self.data.High
-        low = self.data.Low
         close = self.data.Close
-        self.ichimoku = talib.ichimoku(high, low, close)
+        self.sma = self.I(taPanda.sma, close.s)
 
     def next(self):
         price = self.data.Close
-        if price > self.ichimoku['senkou_span_a'][-1] and price > self.ichimoku['senkou_span_b'][-1]:
-            # Price is above the Kumo, indicating a bullish trend
-            if crossover(self.ichimoku['tenkan_sen'], self.ichimoku['kijun_sen']):
-                # Tenkan-sen crosses above Kijun-sen, indicating a bullish signal
-                self.position.close()
-                self.buy(sl=0.90 * price, tp=1.25 * price)
-            elif price > self.ichimoku['senkou_span_a'][-2] and price > self.ichimoku['senkou_span_b'][-2]:
-                # Price is still above the Kumo, but Tenkan-sen hasn't crossed Kijun-sen yet
-                self.position.close()
-                self.buy(sl=0.90 * price, tp=1.25 * price)
-        elif price < self.ichimoku['senkou_span_a'][-1] and price < self.ichimoku['senkou_span_b'][-1]:
-            # Price is below the Kumo, indicating a bearish trend
-            if crossover(self.ichimoku['kijun_sen'], self.ichimoku['tenkan_sen']):
-                # Kijun-sen crosses above Tenkan-sen, indicating a bearish signal
-                self.position.close()
-                self.sell(sl=1.10 * price, tp=0.75 * price)
-            elif price < self.ichimoku['senkou_span_a'][-2] and price < self.ichimoku['senkou_span_b'][-2]:
-                # Price is still below the Kumo, but Kijun-sen hasn't crossed Tenkan-sen yet
-                self.position.close()
-                self.sell(sl=1.10 * price, tp=0.75 * price)
+        if crossover(price, self.sma):
+            self.position.close()
+            self.buy(sl=0.90 * price, tp=1.25 * price)
+        elif crossover(self.sma, price):
+            self.position.close()
+            self.sell(sl=1.10 * price, tp=0.75 * price)
+
+
+# class Ichimoku(Strategy):
+#     def init(self):
+#         high = self.data.High
+#         low = self.data.Low
+#         close = self.data.Close
+#         self.ichimoku = talib.ichimoku(high, low, close)
+
+#     def next(self):
+#         price = self.data.Close
+#         if price > self.ichimoku['senkou_span_a'][-1] and price > self.ichimoku['senkou_span_b'][-1]:
+#             # Price is above the Kumo, indicating a bullish trend
+#             if crossover(self.ichimoku['tenkan_sen'], self.ichimoku['kijun_sen']):
+#                 # Tenkan-sen crosses above Kijun-sen, indicating a bullish signal
+#                 self.position.close()
+#                 self.buy(sl=0.90 * price, tp=1.25 * price)
+#             elif price > self.ichimoku['senkou_span_a'][-2] and price > self.ichimoku['senkou_span_b'][-2]:
+#                 # Price is still above the Kumo, but Tenkan-sen hasn't crossed Kijun-sen yet
+#                 self.position.close()
+#                 self.buy(sl=0.90 * price, tp=1.25 * price)
+#         elif price < self.ichimoku['senkou_span_a'][-1] and price < self.ichimoku['senkou_span_b'][-1]:
+#             # Price is below the Kumo, indicating a bearish trend
+#             if crossover(self.ichimoku['kijun_sen'], self.ichimoku['tenkan_sen']):
+#                 # Kijun-sen crosses above Tenkan-sen, indicating a bearish signal
+#                 self.position.close()
+#                 self.sell(sl=1.10 * price, tp=0.75 * price)
+#             elif price < self.ichimoku['senkou_span_a'][-2] and price < self.ichimoku['senkou_span_b'][-2]:
+#                 # Price is still below the Kumo, but Kijun-sen hasn't crossed Tenkan-sen yet
+#                 self.position.close()
+#                 self.sell(sl=1.10 * price, tp=0.75 * price)
 
 
 STRATEGIES = [
@@ -436,7 +447,7 @@ STRATEGIES = [
     OBV,
     AD,
     ADX,
-    StochasticOscillator,
+    # StochasticOscillator,
     StandardDeviation,
     EBSW,
     TRIX,
@@ -450,7 +461,7 @@ STRATEGIES = [
     DEMA,
     ALMA,
     RVGI,
-    Ichimoku,
+    # Ichimoku,
 ]
 
 STRATEGIES_STR = [
@@ -462,7 +473,7 @@ STRATEGIES_STR = [
     "OBV",
     "AD",
     "ADX",
-    "StochasticOscillator",
+    # "StochasticOscillator",
     "StandardDeviation",
     "EBSW",
     "TRIX",
@@ -476,5 +487,5 @@ STRATEGIES_STR = [
     "DEMA",
     "ALMA",
     "RVGI",
-    "Ichimoku",
+    # "Ichimoku",
 ]

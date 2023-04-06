@@ -151,6 +151,19 @@ def get_SP500():
     data = pd.read_html(api_endpoint)
     return list(data[0]['Symbol'])
 
+def binance_funding_rate():
+    # url = (f"https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1621756800000&limit=1000")
+    # data_funding=get_jsonparsed_data(url)
+    # data_funding= [ [round(obj['fundingTime'], -4),obj['fundingRate']] for obj in data_funding] #keep only  funding time and rate
+    # data_funding[:10]
+
+    # rewrite with httpx
+    url = "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1621756800000&limit=1000"
+    data_funding = get_jsonparsed_data(url)
+    data_funding = [[round(obj['fundingTime'], -4), obj['fundingRate']] for obj in data_funding]  # keep only  funding time and rate
+    data_funding[:10]
+    
+
 def get_all_crypto():
     """
     All possible crypto symbols
