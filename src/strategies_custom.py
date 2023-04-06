@@ -7,9 +7,10 @@ import numpy as np
 import pandas_ta as taPanda
 import talib
 
+
 class DSA(Strategy):
     def init(self):
-        self.amount_to_invest_per_day=10
+        self.amount_to_invest_per_day = 10
         # liste contenant pour chaque date sa representation en journée de la semaine
         # lundi=0
         self.day_of_week = self.I(
@@ -17,6 +18,7 @@ class DSA(Strategy):
             self.data.Close.s.index.dayofweek,
             plot=False,
         )
+
     def next(self):
         # If trade_on_close=False, buy signal on tuesday at the closing price, so backtesting will buy at the openning price on wednesday
         # If trade_on_close=True, buy signal on tuesday at the closing price, so backtesting will buy at the closing price on tuesday
@@ -27,3 +29,20 @@ class DSA(Strategy):
             self.position.close()
 
 
+class Funding(Strategy):
+    def init(self):
+        self.close = self.data.Close
+        self.funding = self.data.fundingRate
+        self.pctChange = self.data.pctChange
+        self.daily_average = self.data['8h Average Sentiment']
+
+    def next(self):
+        # funding negatif= les shorts paient les longs
+
+        if self.funding < 0 and self.pctChange > 0 and self.daily_average > 0:
+            # open the long position
+            self.buy(sl=0.90*self.close, tp=1.15*self.close)
+
+        elif self.funding > 0 and self.pctChange < 0 and self.daily_average > 0:
+            # open the short  position
+            self.sell(sl=1.10*self.close, tp=0.90*self.close)

@@ -1,3 +1,4 @@
+from ipaddress import v4_int_to_packed
 import httpx
 from config import BASE_URL_BINANCE, BASE_URL_FMP, FMP_API_KEY
 import os
@@ -151,18 +152,93 @@ def get_SP500():
     data = pd.read_html(api_endpoint)
     return list(data[0]['Symbol'])
 
-def binance_funding_rate():
-    # url = (f"https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1621756800000&limit=1000")
-    # data_funding=get_jsonparsed_data(url)
-    # data_funding= [ [round(obj['fundingTime'], -4),obj['fundingRate']] for obj in data_funding] #keep only  funding time and rate
-    # data_funding[:10]
+def binance_funding_rate(symbol: str, start_time: int, limit: int = 1000) -> list:
+    url = "https://fapi.binance.com/fapi/v1/fundingRate"
+    params = {"symbol": symbol, "startTime": start_time, "limit": limit}
 
-    # rewrite with httpx
-    url = "https://fapi.binance.com/fapi/v1/fundingRate?symbol=ETHUSDT&startTime=1621756800000&limit=1000"
-    data_funding = get_jsonparsed_data(url)
-    data_funding = [[round(obj['fundingTime'], -4), obj['fundingRate']] for obj in data_funding]  # keep only  funding time and rate
-    data_funding[:10]
-    
+    if response := make_api_request(url, params):
+        data_funding = [[round(obj['fundingTime'], -4), obj['fundingRate']] for obj in response]
+        return data_funding[:10]
+    else:
+        return None
+
+def binance_ohlc_data(symbol: str, interval: str="8h", limit: int = 1500) -> list:
+    url = "https://fapi.binance.com/fapi/v1/klines"
+    params = {"symbol": symbol, "interval": interval, "limit": limit}
+
+    return response[:10] if (response := make_api_request(url, params)) else None
+
+def get_sentiments(symbol: str) -> dict:
+    """
+    Get sentiments
+
+    Args:
+        symbol (str): Symbol of the company
+
+    Returns:
+        dict: Dictionary containing the data
+    """
+    api_endpoint = f"{BASE_URL_FMP.replace('v3', 'v4')}/historical/social-sentiment"
+    params = {"apikey": FMP_API_KEY, symbol: symbol}
+    return make_api_request(api_endpoint, params)
+
+def clean_data_binance(data):
+    df = pd.DataFrame(data)
+    df.columns=["Open time","Open","High","Low","Close","Volume","Close time","Quote asset volume","Number of trades","Taker buy volume","Taker buy quote asset volume","Ignore"]
+    df = df.drop(
+        [
+            "Quote asset volume",
+            "Number of trades",
+            "Taker buy volume",
+            "Taker buy quote asset volume",
+            "Ignore",
+        ],
+        axis=1,
+    )
+    df['Open time']=pd.to_datetime(df['Open time'],unit='ms')
+    df.set_index('Open time',inplace=True) #date needs to be set as index!
+    return df
+
+def df_funding_rate(data):
+    df_funding = pd.DataFrame(data)
+    df_funding.columns=["fundingTime","fundingRate"]
+    df_funding['fundingTime']=pd.to_datetime(df_funding['fundingTime'],unit='ms')
+    df_funding.set_index('fundingTime',inplace=True) #date needs to be set as index!
+    return df_funding
+
+def merge_data(df,df_funding):
+    data = df.merge(df_funding, left_index=True, right_index=True, how='inner')
+    data = data.astype(float)
+    data["pctChange"]=data["Close"].pct_change()
+    data = data.iloc[1: , :]
+    return data
+
+
+def clean_data(data):
+    """
+    Clean historical price data for use in a backtest.
+    Returns a Pandas dataframe of the cleaned data.
+    """
+    data = data["historical"]
+    data = pd.DataFrame(data)
+    data.columns = [x.title() for x in data.columns]
+    data = data.drop(
+        [
+            "Adjclose",
+            "Unadjustedvolume",
+            "Change",
+            "Changepercent",
+            "Vwap",
+            "Label",
+            "Changeovertime",
+        ],
+        axis=1,
+    )
+    data["Date"] = pd.to_datetime(data["Date"])
+    data.set_index("Date", inplace=True)
+    data = data.iloc[::-1]
+    return data
+
 
 def get_all_crypto():
     """

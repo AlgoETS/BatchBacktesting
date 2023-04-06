@@ -1,18 +1,15 @@
 # BatchBacktesting.py
 
 # import library
-import sys
 import os
-import httpx
 import pandas as pd
 import numpy as np
 from datetime import datetime
 import concurrent.futures
-import glob
 from rich.progress import track
 import warnings
 
-from src.data import get_all_crypto
+from src.data import clean_data, get_all_crypto
 
 warnings.filterwarnings("ignore")
 
@@ -20,8 +17,6 @@ warnings.filterwarnings("ignore")
 from backtesting import Backtest, Strategy
 from backtesting.lib import crossover
 import pandas_ta as taPanda
-
-from config import BASE_URL_FMP, FMP_API_KEY
 
 # import data
 from data import (
@@ -126,32 +121,6 @@ def process_instrument_optimise(instrument, strategy):
         return None
 
 
-def clean_data(data):
-    """
-    Clean historical price data for use in a backtest.
-    Returns a Pandas dataframe of the cleaned data.
-    """
-    data = data["historical"]
-    data = pd.DataFrame(data)
-    data.columns = [x.title() for x in data.columns]
-    data = data.drop(
-        [
-            "Adjclose",
-            "Unadjustedvolume",
-            "Change",
-            "Changepercent",
-            "Vwap",
-            "Label",
-            "Changeovertime",
-        ],
-        axis=1,
-    )
-    data["Date"] = pd.to_datetime(data["Date"])
-    data.set_index("Date", inplace=True)
-    data = data.iloc[::-1]
-    return data
-
-
 def process_output(output, instrument, strategy, in_row=True):
     """
     Process backtest output data to include instrument name, strategy name,
@@ -250,4 +219,5 @@ def run_backtests_optimise(instruments, strategy, num_threads=4, generate_plots=
     start = data_frame["Start"].to_string().strip().split()[1]
     end = data_frame["End"].to_string().strip().split()[1]
     fileNameOutput = f"output/{strategy.__name__}-{start}-{end}.csv"
+    data_frame.to_csv(fileNameOutput)
     return data_frame
