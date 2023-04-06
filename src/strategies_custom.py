@@ -2,8 +2,11 @@
 import contextlib
 import math
 from backtesting import Backtest, Strategy
+from backtesting.lib import SignalStrategy
+from backtesting.lib import crossover, compute_stats
 from backtesting.lib import crossover
 import numpy as np
+import pandas as pd
 import pandas_ta as taPanda
 import talib
 
@@ -46,3 +49,30 @@ class Funding(Strategy):
         elif self.funding > 0 and self.pctChange < 0 and self.daily_average > 0:
             # open the short  position
             self.sell(sl=1.10*self.close, tp=0.90*self.close)
+
+class SR(SignalStrategy):
+        threshold = 0.5
+        n = 5
+        def init(self):
+            super().init()
+
+            # Precompute the two moving averages
+            DR = pd.Series(self.data.Close).pct_change()*100
+            MA = DR.rolling(window=self.n).mean()
+            MAstd = DR.rolling(window=self.n).std(ddof= 1)
+            Z = (DR - MA)/MAstd
+
+            # Precompute signal
+            signal_long = (Z > self.threshold) & (Z.shift() < self.threshold)
+            signal_short = (Z < -self.threshold) & (Z.shift() > -self.threshold)
+
+            # combine signal
+            signal = signal_long
+            signal[signal_short] = -1
+
+            # add signal
+            entry_size = signal * 0.9999999
+            self.set_signal(entry_size = entry_size)
+
+        def next(self):
+            super().next()
