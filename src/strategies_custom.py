@@ -51,6 +51,9 @@ class Funding(Strategy):
             self.sell(sl=1.10*self.close, tp=0.90*self.close)
 
 class SR(SignalStrategy):
+        # https://colab.research.google.com/drive/1l4Ki7tcdlhjEqfcuhdETdxbupIwyB6KS#scrollTo=eeW5F93eqtXa
+        #
+        # SR Strategy is a simple strategy that uses the standard deviation of the returns to determine the entry and exit points.
         threshold = 0.5
         n = 5
         def init(self):
