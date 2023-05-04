@@ -12,6 +12,9 @@
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 
+https://nextjournal.com/emaalgoets/exp%C3%A9rimentation-des-indicateurs-technique?change-id=DPRFHNvXwD3MyHorLnHD95
+https://algoets.github.io/BatchBacktesting/output/charts/EMA/AAPL-2018-04-04-2023-04-03.html
+
 BatchBacktesting is a Python tool that allows users to run backtests on a large number of stocks and strategies in parallel. The results are stored in a csv file for easy analysis.
 
 The results are stored in a CSV file for easy analysis. This tool is useful for those who want to quickly test a large number of trading strategies on different stocks or cryptocurrencies.
