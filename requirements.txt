@@ -1,4 +1,4 @@
-backtesting==0.3.1
+backtesting==0.3.3
 concurrent-futures==1.3.0
 httpx==0.14.1
 numpy==1.26.0
