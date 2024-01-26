@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Data Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        label,
+        select {
+            margin: 10px 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 750px;
+            border: 1px solid #ddd;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+    <div id="particles-js" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+    <div class="container">
+        <h2>Backtesting Data Visualization</h2>
+
+        <!-- Dropdown for Chart or Raw Data -->
+        <label for="data-type">Data Type:</label>
+        <select id="data-type" name="data-type">
+            <option value="charts">Chart</option>
+            <option value="raw">Raw Data</option>
+            <option value="complete">Complete Raw Data</option>
+        </select>
+
+        <!-- Dropdown for Strategy -->
+        <label for="strategy">Strategy:</label>
+        <select id="strategy" name="strategy">
+            <option value="Aberration">Aberration</option>
+            <option value="AD">AD</option>
+            <option value="ADX">ADX</option>
+            <option value="ALMA">ALMA</option>
+            <option value="AroonOscillator">AroonOscillator</option>
+            <option value="BollingerBands">BollingerBands</option>
+            <option value="CDLZ">CDLZ</option>
+            <option value="DEMA">DEMA</option>
+            <option value="EBSW">EBSW</option>
+            <option value="EMA">EMA</option>
+            <option value="FWMA">FWMA</option>
+            <option value="LinearRegression">LinearRegression</option>
+            <option value="MACD">MACD</option>
+            <option value="MAD">MAD</option>
+            <option value="MOM">MOM</option>
+            <option value="OBV">OBV</option>
+            <option value="PercentageReturn">PercentageReturn</option>
+            <option value="RVGI">RVGI</option>
+            <option value="RSI">RSI</option>
+            <option value="SimpleMeanReversion">SimpleMeanReversion</option>
+            <option value="SMA">SMA</option>
+            <option value="StandardDeviation">StandardDeviation</option>
+            <option value="TRIX">TRIX</option>
+
+        </select>
+
+        <!-- Dropdown for Ticker -->
+        <label for="ticker">Ticker:</label>
+        <select id="ticker" name="ticker">
+            <option value="AAPL">AAPL</option>
+        </select>
+
+        <!-- iFrame to display chosen data -->
+        <iframe id="data-display" src=""></iframe>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Particle.js
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: "#000000"
+                    },
+                    shape: {
+                        type: "circle",
+                        stroke: {
+                            width: 0,
+                            color: "#000000"
+                        }
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: false,
+                        anim: {
+                            enable: false,
+                            speed: 1,
+                            opacity_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        anim: {
+                            enable: false,
+                            speed: 40,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#000000",
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 6,
+                        direction: "none",
+                        random: false,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: {
+                            enable: false,
+                            rotateX: 600,
+                            rotateY: 1200
+                        }
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "repulse"
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        },
+                        resize: true
+                    },
+                    modes: {
+                        grab: {
+                            distance: 140,
+                            line_linked: {
+                                opacity: 1
+                            }
+                        },
+                        bubble: {
+                            distance: 400,
+                            size: 40,
+                            duration: 2,
+                            opacity: 8,
+                            speed: 3
+                        },
+                        repulse: {
+                            distance: 200,
+                            duration: 0.4
+                        },
+                        push: {
+                            particles_nb: 4
+                        },
+                        remove: {
+                            particles_nb: 2
+                        }
+                    }
+                },
+                retina_detect: true
+            });
+            // Stock tickers
+            var stockTicker = ['MMM',
+                'AOS',
+                'ABT',
+                'ABBV',
+                'ACN',
+                'ADBE',
+                'AMD',
+                'AES',
+                'AFL',
+                'A',
+                'APD',
+                'ABNB',
+                'AKAM',
+                'ALB',
+                'ARE',
+                'ALGN',
+                'ALLE',
+                'LNT',
+                'ALL',
+                'GOOGL',
+                'GOOG',
+                'MO',
+                'AMZN',
+                'AMCR',
+                'AEE',
+                'AAL',
+                'AEP',
+                'AXP',
+                'AIG',
+                'AMT',
+                'AWK',
+                'AMP',
+                'AME',
+                'AMGN',
+                'APH',
+                'ADI',
+                'ANSS',
+                'AON',
+                'APA',
+                'AAPL',
+                'AMAT',
+                'APTV',
+                'ACGL',
+                'ADM',
+                'ANET',
+                'AJG',
+                'AIZ',
+                'T',
+                'ATO',
+                'ADSK',
+                'ADP',
+                'AZO',
+                'AVB',
+                'AVY',
+                'AXON',
+                'BKR',
+                'BALL',
+                'BAC',
+                'BK',
+                'BBWI',
+                'BAX',
+                'BDX',
+                'BRK.B',
+                'BBY',
+                'BIO',
+                'TECH',
+                'BIIB',
+                'BLK',
+                'BX',
+                'BA',
+                'BKNG',
+                'BWA',
+                'BXP',
+                'BSX',
+                'BMY',
+                'AVGO',
+                'BR',
+                'BRO',
+                'BF.B',
+                'BLDR',
+                'BG',
+                'CDNS',
+                'CZR',
+                'CPT',
+                'CPB',
+                'COF',
+                'CAH',
+                'KMX',
+                'CCL',
+                'CARR',
+                'CTLT',
+                'CAT',
+                'CBOE',
+                'CBRE',
+                'CDW',
+                'CE',
+                'COR',
+                'CNC',
+                'CNP',
+                'CDAY',
+                'CF',
+                'CHRW',
+                'CRL',
+                'SCHW',
+                'CHTR',
+                'CVX',
+                'CMG',
+                'CB',
+                'CHD',
+                'CI',
+                'CINF',
+                'CTAS',
+                'CSCO',
+                'C',
+                'CFG',
+                'CLX',
+                'CME',
+                'CMS',
+                'KO',
+                'CTSH',
+                'CL',
+                'CMCSA',
+                'CMA',
+                'CAG',
+                'COP',
+                'ED',
+                'STZ',
+                'CEG',
+                'COO',
+                'CPRT',
+                'GLW',
+                'CTVA',
+                'CSGP',
+                'COST',
+                'CTRA',
+                'CCI',
+                'CSX',
+                'CMI',
+                'CVS',
+                'DHR',
+                'DRI',
+                'DVA',
+                'DE',
+                'DAL',
+                'XRAY',
+                'DVN',
+                'DXCM',
+                'FANG',
+                'DLR',
+                'DFS',
+                'DG',
+                'DLTR',
+                'D',
+                'DPZ',
+                'DOV',
+                'DOW',
+                'DHI',
+                'DTE',
+                'DUK',
+                'DD',
+                'EMN',
+                'ETN',
+                'EBAY',
+                'ECL',
+                'EIX',
+                'EW',
+                'EA',
+                'ELV',
+                'LLY',
+                'EMR',
+                'ENPH',
+                'ETR',
+                'EOG',
+                'EPAM',
+                'EQT',
+                'EFX',
+                'EQIX',
+                'EQR',
+                'ESS',
+                'EL',
+                'ETSY',
+                'EG',
+                'EVRG',
+                'ES',
+                'EXC',
+                'EXPE',
+                'EXPD',
+                'EXR',
+                'XOM',
+                'FFIV',
+                'FDS',
+                'FICO',
+                'FAST',
+                'FRT',
+                'FDX',
+                'FIS',
+                'FITB',
+                'FSLR',
+                'FE',
+                'FI',
+                'FLT',
+                'FMC',
+                'F',
+                'FTNT',
+                'FTV',
+                'FOXA',
+                'FOX',
+                'BEN',
+                'FCX',
+                'GRMN',
+                'IT',
+                'GEHC',
+                'GEN',
+                'GNRC',
+                'GD',
+                'GE',
+                'GIS',
+                'GM',
+                'GPC',
+                'GILD',
+                'GPN',
+                'GL',
+                'GS',
+                'HAL',
+                'HIG',
+                'HAS',
+                'HCA',
+                'PEAK',
+                'HSIC',
+                'HSY',
+                'HES',
+                'HPE',
+                'HLT',
+                'HOLX',
+                'HD',
+                'HON',
+                'HRL',
+                'HST',
+                'HWM',
+                'HPQ',
+                'HUBB',
+                'HUM',
+                'HBAN',
+                'HII',
+                'IBM',
+                'IEX',
+                'IDXX',
+                'ITW',
+                'ILMN',
+                'INCY',
+                'IR',
+                'PODD',
+                'INTC',
+                'ICE',
+                'IFF',
+                'IP',
+                'IPG',
+                'INTU',
+                'ISRG',
+                'IVZ',
+                'INVH',
+                'IQV',
+                'IRM',
+                'JBHT',
+                'JBL',
+                'JKHY',
+                'J',
+                'JNJ',
+                'JCI',
+                'JPM',
+                'JNPR',
+                'K',
+                'KVUE',
+                'KDP',
+                'KEY',
+                'KEYS',
+                'KMB',
+                'KIM',
+                'KMI',
+                'KLAC',
+                'KHC',
+                'KR',
+                'LHX',
+                'LH',
+                'LRCX',
+                'LW',
+                'LVS',
+                'LDOS',
+                'LEN',
+                'LIN',
+                'LYV',
+                'LKQ',
+                'LMT',
+                'L',
+                'LOW',
+                'LULU',
+                'LYB',
+                'MTB',
+                'MRO',
+                'MPC',
+                'MKTX',
+                'MAR',
+                'MMC',
+                'MLM',
+                'MAS',
+                'MA',
+                'MTCH',
+                'MKC',
+                'MCD',
+                'MCK',
+                'MDT',
+                'MRK',
+                'META',
+                'MET',
+                'MTD',
+                'MGM',
+                'MCHP',
+                'MU',
+                'MSFT',
+                'MAA',
+                'MRNA',
+                'MHK',
+                'MOH',
+                'TAP',
+                'MDLZ',
+                'MPWR',
+                'MNST',
+                'MCO',
+                'MS',
+                'MOS',
+                'MSI',
+                'MSCI',
+                'NDAQ',
+                'NTAP',
+                'NFLX',
+                'NEM',
+                'NWSA',
+                'NWS',
+                'NEE',
+                'NKE',
+                'NI',
+                'NDSN',
+                'NSC',
+                'NTRS',
+                'NOC',
+                'NCLH',
+                'NRG',
+                'NUE',
+                'NVDA',
+                'NVR',
+                'NXPI',
+                'ORLY',
+                'OXY',
+                'ODFL',
+                'OMC',
+                'ON',
+                'OKE',
+                'ORCL',
+                'OTIS',
+                'PCAR',
+                'PKG',
+                'PANW',
+                'PARA',
+                'PH',
+                'PAYX',
+                'PAYC',
+                'PYPL',
+                'PNR',
+                'PEP',
+                'PFE',
+                'PCG',
+                'PM',
+                'PSX',
+                'PNW',
+                'PXD',
+                'PNC',
+                'POOL',
+                'PPG',
+                'PPL',
+                'PFG',
+                'PG',
+                'PGR',
+                'PLD',
+                'PRU',
+                'PEG',
+                'PTC',
+                'PSA',
+                'PHM',
+                'QRVO',
+                'PWR',
+                'QCOM',
+                'DGX',
+                'RL',
+                'RJF',
+                'RTX',
+                'O',
+                'REG',
+                'REGN',
+                'RF',
+                'RSG',
+                'RMD',
+                'RVTY',
+                'RHI',
+                'ROK',
+                'ROL',
+                'ROP',
+                'ROST',
+                'RCL',
+                'SPGI',
+                'CRM',
+                'SBAC',
+                'SLB',
+                'STX',
+                'SRE',
+                'NOW',
+                'SHW',
+                'SPG',
+                'SWKS',
+                'SJM',
+                'SNA',
+                'SO',
+                'LUV',
+                'SWK',
+                'SBUX',
+                'STT',
+                'STLD',
+                'STE',
+                'SYK',
+                'SYF',
+                'SNPS',
+                'SYY',
+                'TMUS',
+                'TROW',
+                'TTWO',
+                'TPR',
+                'TRGP',
+                'TGT',
+                'TEL',
+                'TDY',
+                'TFX',
+                'TER',
+                'TSLA',
+                'TXN',
+                'TXT',
+                'TMO',
+                'TJX',
+                'TSCO',
+                'TT',
+                'TDG',
+                'TRV',
+                'TRMB',
+                'TFC',
+                'TYL',
+                'TSN',
+                'USB',
+                'UBER',
+                'UDR',
+                'ULTA',
+                'UNP',
+                'UAL',
+                'UPS',
+                'URI',
+                'UNH',
+                'UHS',
+                'VLO',
+                'VTR',
+                'VLTO',
+                'VRSN',
+                'VRSK',
+                'VZ',
+                'VRTX',
+                'VFC',
+                'VTRS',
+                'VICI',
+                'V',
+                'VMC',
+                'WRB',
+                'WAB',
+                'WBA',
+                'WMT',
+                'DIS',
+                'WBD',
+                'WM',
+                'WAT',
+                'WEC',
+                'WFC',
+                'WELL',
+                'WST',
+                'WDC',
+                'WRK',
+                'WY',
+                'WHR',
+                'WMB',
+                'WTW',
+                'GWW',
+                'WYNN',
+                'XEL',
+                'XYL',
+                'YUM',
+                'ZBRA',
+                'ZBH',
+                'ZION',
+                'ZTS']
+
+            // Cryptocurrency tickers
+            var cryptoTickers = [
+                "BTCUSD",
+                "ETHUSD",
+                "LTCUSD",
+                "BCHUSD",
+                "XRPUSD",
+                "EOSUSD",
+                "XLMUSD",
+                "TRXUSD",
+                "ETCUSD",
+                "DASHUSD",
+                "ZECUSD",
+                "XTZUSD",
+                "XMRUSD",
+                "ADAUSD",
+                "NEOUSD",
+                "XEMUSD",
+                "VETUSD",
+                "DOGEUSD",
+                "OMGUSD",
+                "ZRXUSD",
+                "BATUSD",
+                "USDTUSD",
+                "LINKUSD",
+                "BTTUSD",
+                "BNBUSD",
+                "ONTUSD",
+                "QTUMUSD",
+                "ALGOUSD",
+                "ZILUSD",
+                "ICXUSD",
+                "KNCUSD",
+                "ZENUSD",
+                "THETAUSD",
+                "IOSTUSD",
+                "ATOMUSD",
+                "MKRUSD",
+                "COMPUSD",
+                "YFIUSD",
+                "SUSHIUSD",
+                "SNXUSD",
+                "UMAUSD",
+                "BALUSD",
+                "AAVEUSD",
+                "UNIUSD",
+                "RENBTCUSD",
+                "RENUSD",
+                "CRVUSD",
+                "SXPUSD",
+                "KSMUSD",
+                "OXTUSD",
+                "DGBUSD",
+                "LRCUSD",
+                "WAVESUSD",
+                "NMRUSD",
+                "STORJUSD",
+                "KAVAUSD",
+                "RLCUSD",
+                "BANDUSD",
+                "SCUSD",
+                "ENJUSD",
+            ]
+
+            var tickerSelect = document.getElementById('ticker');
+
+            cryptoTickers.forEach(function (ticker) {
+                var option = document.createElement('option');
+                option.value = option.text = ticker;
+                tickerSelect.add(option);
+            });
+
+            stockTicker.forEach(function (ticker) {
+                var option = document.createElement('option');
+                option.value = option.text = ticker;
+                tickerSelect.add(option);
+            });
+
+        });
+
+        function updateIframe() {
+            var base = "https://algoets.github.io/BatchBacktesting/output/";
+            var dataType = document.getElementById('data-type').value;
+            var strategy = document.getElementById('strategy').value;
+            var ticker = document.getElementById('ticker').value;
+            var tickerDateRanges = {
+                "BTCBUSD": "2019-06-18-2023-03-31",
+                "BTTBUSD": "2019-01-31-2023-03-30",
+                "ADAUSD": "2018-04-05-2023-03-31",
+                "BATUSD": "2018-04-05-2023-03-31",
+                "BCHUSD": "2018-04-05-2023-03-31",
+                "CARR": "2020-03-19-2023-04-03",
+                "CDAY": "2018-04-26-2023-04-03",
+                "CTVA": "2019-05-24-2023-04-03",
+                "DASHUSD": "2018-04-05-2023-03-31",
+                "DOGEUSD": "2018-04-05-2023-03-31",
+                "DOW": "2019-03-20-2023-04-03",
+                "EOSUSD": "2018-04-05-2023-03-31",
+                "ETCUSD": "2018-04-05-2023-03-31",
+                "ETHUSD": "2018-04-05-2023-03-31",
+                "FOXA": "2019-02-26-2023-04-03",
+                "GEHC": "2022-12-15-2023-04-03",
+                "LTCUSD": "2018-04-05-2023-03-31",
+                "MRNA": "2018-12-07-2023-04-03",
+                "NEOUSD": "2018-04-05-2023-03-31",
+                "OGN": "2021-05-14-2023-04-03",
+                "OMGUSD": "2018-04-05-2023-03-31",
+                "OTIS": "2020-03-19-2023-04-03",
+                "TRXUSD": "2018-04-05-2023-03-31",
+                "VETUSD": "2018-08-03-2023-03-31",
+                "XEMUSD": "2018-04-05-2023-03-31",
+                "XLMUSD": "2018-04-05-2023-03-31",
+                "XMRUSD": "2018-04-05-2023-03-31",
+                "XRPUSD": "2018-04-05-2023-03-31",
+                "XTZUSD": "2018-04-05-2023-03-31",
+                "ZECUSD": "2018-04-05-2023-03-31",
+                "ZRXUSD": "2018-04-05-2023-03-31",
+                // Add other special cases as needed
+            };
+
+            // Default date range
+            var dateRange = "2018-04-05-2023-04-04";
+
+            // Check if the ticker has a special date range
+            if (tickerDateRanges.hasOwnProperty(ticker)) {
+                dateRange = tickerDateRanges[ticker];
+            }
+
+            var src = base + dataType + '/' + strategy + '/' + ticker + '-' + dateRange + '.' + (dataType === 'charts' ? 'html' : 'csv');
+            document.getElementById('data-display').src = src;
+            if (dataType === 'charts') {
+                iframe.src = src;
+            } else if (dataType === 'complete') {
+                var completeDataRanges = {
+                    "AD": "2018-04-05-2023-04-04",
+                    "ADX": "2018-04-05-2023-04-04",
+                    "ALMA": "2018-04-05-2023-04-04",
+                    "Aberration": "2018-04-05-2023-04-04",
+                    "AroonOscillator": "2018-04-05-2023-04-04",
+                    "BollingerBands": "2018-04-05-2023-03-31", // Note: There are two different date ranges for BollingerBands
+                    "CDLZ": "2018-04-05-2023-04-04",
+                    "DEMA": "2018-04-05-2023-04-04",
+                    "EBSW": "2018-04-05-2023-04-04",
+                    "EMA": "2018-04-05-2023-04-04", // Note: There are two different date ranges for EMA
+                    "FWMA": "2018-04-05-2023-04-04",
+                    "LinearRegression": "2018-04-05-2023-04-04", // Note: There are two different date ranges for LinearRegression
+                    "MACD": "2018-04-05-2023-04-04", // Note: There are two different date ranges for MACD
+                    "MAD": "2018-04-05-2023-04-04",
+                    "MOM": "2018-04-05-2023-04-04",
+                    "OBV": "2018-04-06-2023-04-06", // Note: Different starting dates
+                    "PercentageReturn": "2018-04-05-2023-04-04",
+                    "RSI": "2018-04-05-2023-04-04", // Note: There are two different date ranges for RSI
+                    "RVGI": "2018-04-05-2023-04-04",
+                    "SMA": "2018-04-06-2023-04-06", // Note: Different starting dates
+                    "SimpleMeanReversion": "2018-04-05-2023-04-04",
+                    "StandardDeviation": "2018-04-05-2023-04-04", // Note: There are two different date ranges for StandardDeviation
+                    "TRIX": "2018-04-05-2023-04-04"
+                    // Add other strategies as needed
+                };
+
+                var dateRange = completeDataRanges[strategy];
+                src = base + '/' + strategy + '-' + dateRange + '.csv';
+                document.getElementById('data-display').src = src;
+            } else {
+                var url = src.replace('.html', '.csv');
+                fetch(url)
+                    .then(response => response.text())
+                    .then(csv => {
+                        iframe.contentDocument.body.innerHTML = csvToTable(csv);
+                    });
+            }
+        }
+
+        document.getElementById('data-type').addEventListener('change', updateIframe);
+        document.getElementById('strategy').addEventListener('change', updateIframe);
+        document.getElementById('ticker').addEventListener('change', updateIframe);
+
+        // Initialize with default values
+        updateIframe();
+
+        function csvToTable(csv) {
+            var rows = csv.split('\n');
+            var table = '<table border="1">';
+            for (var i = 0; i < rows.length; i++) {
+                var cells = rows[i].split(',');
+                table += '<tr>';
+                for (var j = 0; j < cells.length; j++) {
+                    table += `<td>${cells[j]}</td>`;
+                }
+                table += '</tr>';
+            }
+            table += '</table>';
+            return table;
+        }
+    </script>
+</body>
+
+</html>
